@@ -1,6 +1,7 @@
+
 `include "CONSTANTS.v"
 
-module CORDIC_Rotation(input clock,
+module CORDIC_Vector(input clock,
     input signed [31:0] x,
     input signed [31:0] y,
     input signed [31:0] angle,
@@ -8,7 +9,7 @@ module CORDIC_Rotation(input clock,
     output wire signed [31:0] rotated_x,
     output wire signed [31:0] rotated_y,
     output wire signed [31:0] final_angle);
-parameter NUMBER_OF_ITERATIONS = 29;
+parameter NUMBER_OF_ITERATIONS = 17;
 
 wire signed [31:0] x_prime [0:NUMBER_OF_ITERATIONS-1];
 wire signed [31:0] y_prime [0:NUMBER_OF_ITERATIONS-1];
@@ -46,7 +47,8 @@ begin: iterations
         , .mode (mode) , .y_shift(yshift) , .clock(clock) , .x_out(x_prime[i+1]));
         Y_Calculator yc(.x(x_prime[i]) , .y(y_prime[i]) , .angle(rotated_angles[i])
          , .x_shift(xshift) , .clock(clock) , .y_out(y_prime[i+1]));
-        Z_Calculator zc(.angle(rotated_angles[i]) , .lookup_table_amount(lta) , .clock(clock) , .angle_out(rotated_angles[i+1]));
+        Z_Calculator zc(.angle(rotated_angles[i]) ,.y(y_prime[i]), .lookup_table_amount(lta) , .clock(clock) ,
+         .angle_out(rotated_angles[i+1]));
 	
 
 
@@ -54,10 +56,13 @@ end
 endgenerate
 
 
+wire [31:0] scaled_x , sacled_y;
 
+Scaler scaler(.number(x_prime[NUMBER_OF_ITERATIONS-1]) , .mode(mode) , .answer(scaled_x));
+Scaler scaler2(.number(y_prime[NUMBER_OF_ITERATIONS-1]) , .mode(mode) , .answer(scaled_y));
 
-assign rotated_x = x_prime[NUMBER_OF_ITERATIONS-1];
-assign rotated_y = y_prime[NUMBER_OF_ITERATIONS-1];
+assign rotated_x = scaled_x;
+assign rotated_y = scaled_y;
 assign final_angle = rotated_angles[NUMBER_OF_ITERATIONS-1];
 
 
