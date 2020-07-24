@@ -1,0 +1,494 @@
+\documentclass[12pt,titlepage,a4page , tikz , multi,table , svgnames,xcdraw]{article}
+\usepackage{graphicx}
+\usepackage[svgnames , table , xcdraw]{xcolor} 
+\usepackage{fancyhdr}
+ 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{listings }
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{afterpage}
+\usepackage{amssymb}
+\usepackage{pdflscape}
+\usepackage{lscape}
+\usepackage{amsmath}
+\usepackage{svg}
+\usepackage[final]{pdfpages}
+
+\usepackage{pgf, tikz}
+\usetikzlibrary{arrows, automata}
+\usetikzlibrary{shapes.multipart}
+
+
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage{PTSerif} 
+
+\usepackage{float}
+
+\usepackage[Kashida]{xepersian}
+\settextfont[
+ BoldFont={XB NiloofarBd.ttf}
+ ]{XB Niloofar.ttf}
+
+
+\NewDocumentCommand{\codeword}{v}{
+\texttt{\textcolor{blue}{#1}}
+}
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+
+
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false            % 
+}}
+
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+\newenvironment{changemargin}[2]{%
+\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{\parskip}%
+}%
+\item[]}{\end{list}}
+
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+
+
+\begin{document}
+
+\begin{titlepage}
+
+ \begin{center}
+        
+       \vspace*{0.5cm}
+
+ \vspace{0.5cm}
+       \textbf{ \Huge{به نام خدا} }
+       \vspace{0.2cm}
+       
+       \includegraphics[width=0.4\textwidth]{sharif1.png}
+       
+ 	\vspace{0.3cm}
+       \textbf{ \LARGE{طراحی سیستم‌های دیجیتال} }
+
+ 
+   \vspace{0.3cm}
+  \textbf{ \Large{ پروژه پایانی - CORDIC} }
+   \vspace{0.3cm}
+       
+ 
+      \large \textbf{دانشکده مهندسی کامپیوتر}\\\vspace{0.2cm}
+    \large   دانشگاه صنعتی شریف\\\vspace{0.25cm}
+      
+استاد:\\
+    \textbf{{جناب آقای دکتر بهاروند}}
+
+    \vspace{0.15cm}
+    \noindent\rule[1ex]{\linewidth}{3pt}
+    
+    \vspace{0.5cm}
+نام، نام خانوادگی و شماره دانشجویی اعضای گروه:\\
+    
+    \textbf{{علیرضا ایلامی - 97101286}}
+        \vspace{0.05cm}
+        
+     
+        \textbf{{محمدمتین فتوحی - 97106143}}
+        \vspace{0.05cm}
+        
+        \textbf{{سید مهدی فقیه - 97106198}}
+        \vspace{0.05cm}
+        
+           \textbf{{علی قاسمی - 97106205}}
+        \vspace{0.05cm}
+        
+        
+        \textbf{{امیرمهدی نامجو - 97107212}}
+        \vspace{0.05cm}
+        
+       \textbf{{محمدرضا یوسف پور   97106324}}
+        \vspace{0.05cm}
+
+
+\end{center}
+\end{titlepage}
+
+\newpage
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+
+\cfoot{\thepage}
+\chead{پروژه پایانی}
+\rhead{CORDIC}
+\lhead{طراحی سیستم‌های دیجیتال}
+
+
+
+\newpage
+
+\section{مقدمه}
+
+\subsection{معرفی اجمالی و تاریخچه}
+هدف اصلی ما در این پروژه، طراحی یک واحد CORDIC است. CORDIC مخفف واژه \lr{COordinate Rotation DIgital Computer} به معنی کامپیوتر دیجیتیال چرخش مختصاتی است. این الگوریتم اولین بار در سال 1956 توسط آقای جک ولدر (\lr{Jack E. Volder})،‌ که یک مهندس اویونیک (مهندس الکترونیک مرتبط به صنعت هوانوردی) بود،‌ برای سیستم مسیریابی بمب افکن B-58 ابداع شد. هر چند بعضی از ایده های استفاده شده در این روش،‌ حتی در قرن هفدهم ذکر شده بودند. ویژگی اصلی این الگوریتم هم این است که امکان پیاده سازی آن با عناصر ساده جمع کننده و شیفت دهنده وجود دارد و نیازی به استفاده از واحد های پیشرفته تر نظیر ضرب کننده وجود ندارد. همچنین باید توجه کرد که در زمان ساخت و توسعه این الگوریتم، کامپیوتر واژه ای برای اشاره به دستگاه محاسبه گر بوده است و کامپیوتر با آن مفهوم سیستم متشکل از پردازنده و حافظه و مفاهیم مطرح شده توسط تورینگ، هر چند وجود داشت،‌ اما هنوز کاربرد آن گسترده نشده بود. از این رو نباید لغت کامپیوتر در نام این الگوریتم را با تعریف امروزی آن اشتباه گرفت.
+
+
+\subsection{هدف الگوریتم}
+الگوریتم CORDIC در شکل ساده و رایج خود،‌ الگوریتمی برای محاسبه مقادیر توابع مختلف علی الخصوص توابع مثلثاتی و هذلولوی است. از الگوریتم CORDIC در مواردی برای محاسبه توابع لگاریتمی،‌ جذر گرفتن و موارد نظیر این هم استفاده می شود اما شکل اولیه آن مبتنی بر همان توابع مثلثاتی است.
+
+در اصل الگوریتم اصلی که در این جا قصد پیاده سازی آن را داریم،‌ دو حالت عملکردی مختلف دارد. حالت Rotation و حالت \lr{Vectoring}. در حالت \lr{Rotation}، یک بردار همراستا با محور $x$ و همچنین یک زاویه به الگوریتم داده شده و این الگوریتم، در اثر چرخش های متوالی در مراحل پشت سرهم، بردار اولیه را می چرخاند تا در نهایت برآیند تمامی این چرخش ها،‌ با دقت مشخصی برابر با زاویه داده شده به برنامه بشود. در حالت \lr{Vectoring}، یک بردار دلخواه داده می شود و الگوریتم سعی می کند در اثر چرخش های متوالی و منظم، مولفه $y$ بردار را از بین ببرد و آن را بر محور $x$ منطبق کند. با این کار، از طریق مولفه $x$ نهایی می توان اندازه بردار اولیه را بدست آورد و همچنین با بررسی روند چرخش های انجام شده،‌ می توان به زاویه بردار اولیه هم پی برد.
+
+\newpage
+
+\subsection{پایه ریاضی}
+
+\subsubsection{حالت Rotation}
+ابتدا باید به نحوه مدل کردن چرخش یک نقطه در دستگاه مختصات بپردازیم. اگر نقطه $v = (x , y)$ را به اندازه زاویه $\theta$ به صورت پادساعتگرد (در جهت مثلثاتی) دوران بدهیم، نقطه $v' = (x' , y')$ به صورت زیر بدست می آید:
+
+$$x' = x \cos(\theta) - y \sin(\theta)$$
+$$y' = x \sin (\theta) + y \cos (\theta) $$
+
+از طرف دیگر، یک دوران به اندازه $\theta$ را می توان مجموعی از $n$ دوران دیگر $\theta_1 , \theta_2 , \cdots , \theta_n$ دانست که $\theta = \theta_1 + \theta_2 + \cdots \theta_n$
+
+در نتیجه می توان برای انجام یک دوران، آن را به چشم تعدادی دوران دیگر دانست و با نماد گذاری نقطه شروع به شکل $v_0 = (x_0 , y_0)$ و نتیجه هر کدام از $n$ دوران به صورت $v_i = (x_i , y_i)$ داریم:
+
+$$x_{i+1} = x_{i} \cos(\theta_{i+1}) - y_{i} \sin(\theta_{i+1})$$
+$$y_{i+1} = x_{i} \sin (\theta_{i+1}) + y_{i} \cos (\theta_{i+1}) $$
+
+از طرف دیگر، با فاکتور گرفتن از $\cos(\theta_{i+1}$ در عبارات بالا داریم:
+
+$$x_{i+1} =\cos(\theta_{i+1})( x_{i}  - y_{i} \tan(\theta_{i+1}))$$
+$$y_{i+1} = \cos(\theta_{i+1})(x_{i} \tan (\theta_{i+1}) + y_{i}  (\theta_{i+1})) $$
+
+اگر عبارت شامل $\cos$ را کنار بگذاریم، درون پرانتز شاهد یک جمع (تفریق) و یک ضرب هستیم. در سخت افزار ضرب به حالت کلی، هزینه نسبتا بالایی دارد؛ اما الگوریتم CORDIC سعی می کند با ایده هوشمندانه ضرب در توان های $2$ این مشکل را برطرف کند. زوایایی که قرار است برای چرخش ها انتخاب بشوند، باید به این صورت باشند که:
+
+$$\tan (\theta_{i+1}) = \pm 2^{-i}$$
+
+از آن جایی که عملیات های ضرب یا تقسیم بر توان های $2$ در یک سیستم دیجیتالی به راحتی از طریق شیفت دادن قابل انجام است، بدون نیاز به استفاده از ضرب کننده، می توانیم عملیات ها را انجام بدهیم.
+
+نکته مهمی که باقی می ماند، کسینوس هایی است که در هر مرحله در حال ضرب شدن هستند. ابتدا باید توجه کرد که:
+
+$$\cos (\arctan (2 ^{-i})) = \frac{1}{\sqrt{1 + 2^{-i}}}$$
+
+در نتیجه، در اصل بسته به این که قرار است این محاسبات تا چند مرحله ادامه پیدا کنند، عدد ضرب شده نهایی به صورت:
+
+$$K = \prod_{i} \frac{1}{\sqrt{1 + 2^{-2i}}}$$
+
+خواهد بود.
+
+
+جدول محاسبات مربوط به $K$ در زیر آمده است:
+
+$$\begin{array}{c|c|c|c|c}
+{i} & {2^{-i}} & {\arctan(2^{-i})} & {\cos(\arctan(2^{-i}))} & \prod_{i} \cos(\arctan(2^{-i})) \\
+ 0 &  1.0000 &  0.7854 &  0.7071 &  0.7071\\
+  1 &  0.5000 &  0.4636 &  0.8944 &  0.6325\\
+  2 &  0.2500 &  0.2450 &  0.9701 &  0.6136\\
+  3 &  0.1250 &  0.1244 &  0.9923 &  0.6088\\
+  4 &  0.0625 &  0.0624 &  0.9981 &  0.6076\\
+  5 &  0.0312 &  0.0312 &  0.9995 &  0.6074\\
+  6 &  0.0156 &  0.0156 &  0.9999 &  0.6073\\
+  7 &  0.0078 &  0.0078 &  1.0000 &  0.6073\\
+  8 &  0.0039 &  0.0039 &  1.0000 &  0.6073\\
+  9 &  0.0020 &  0.0020 &  1.0000 &  0.6073\\
+  10 &  0.0010 &  0.0010 &  1.0000 &  0.6073\\
+  11 &  0.0005 &  0.0005 &  1.0000 &  0.6073\\
+  12 &  0.0002 &  0.0002 &  1.0000 &  0.6073\\
+  13 &  0.0001 &  0.0001 &  1.0000 &  0.6073\\
+  14 &  0.0001 &  0.0001 &  1.0000 &  0.6073\\
+  15 &  0.0000 &  0.0000 &  1.0000 &  0.6073
+
+\end{array}$$
+
+همان طور که مشخص است، با دقت چهار رقم اعشار سری مذکور به $0.6073$ همگراست. با کمک نرم افزارهای ریاضیاتی نظیر Mathematica نیز می توان بررسی کرد که:
+
+$$\lim_{n \to \infty}  \prod_{i=0}^{n} \frac{1}{\sqrt{1 + 2^{-2i}}} \approx 0.607253 \approx 0.6073$$
+
+همان طور که در بالا دیدیم:
+
+$$\tan (\theta_{i+1}) = \pm 2^{-i}$$
+
+یعنی دو مقدار مثبت و منفی وجود دارد و زاویه هم می تواند به دو شکل مختلف مثبت و منفی باشد. برای این که بدانیم در هر مرحله، باید مقدار مثبت زاویه را اعمال کنیم یا مقدار منفی آن را باید به این توجه کنیم که ما در این جا با زوایایی با مقادیر مشخص سر و کار داریم و در ابتدا هم یک زاویه به عنوان زاویه هدف در نظر داریم که هر بار با اجرای یکی از مراحل، می توانیم زاویه هدف را کاهش داده و به مقدار جدید آپدیت کنیم. حال اگر مقدار زاویه هدف باقی مانده مثبت باشد، باید با کم کردن یک زاویه مثبت، آن را به صفر نزدیک کنیم و اگر منفی باشد، با کم کردن یک زاویه منفی، آن را به صفر نزدیک نماییم.
+
+در نتیجه فرمول کلی الگوریتم به صورت زیر در می آید:
+
+$$x_{i+1}=x_{i}- d_{i} \cdot y_{i} \cdot 2^{-i}$$
+
+$$\begin{array}{c}
+y_{i+1}=y_{i}+d_{i} x_{i} 2^{-i} \\
+\theta_{i+1}=\theta_{i}-d_{i} \arctan(2^{-i})
+\end{array}$$
+
+که در آن اگر $z_i$ نامنفی باشد، مقدار $d_i$ برابر 1 و در غیر این صورت برابر $-1$ است.
+
+چند نکته در این جا باقی می ماند. اولین مورد این است که بازه برد $\arctan$ در
+$\frac{-\pi}{2} < \theta < \frac{\pi}{2}$
+است. برای این که عملیات چرخش برای زوایای بیش تر از $\frac{\pi}{2}$ و کمتر از 
+$\frac{-\pi}{2}$
+هم به خوبی جواب بدهد، باید دوران ناشی از $\frac{\pi}{2}$ ای که این زاویه ها اضافه یا کم دارند را در همان ابتدا اعمال کنیم.
+برای این کار، اگر 
+$\theta > \frac{\pi}{2}$
+باشد، در همان ابتدا تبدیل زیر را اعمال می کنیم:
+$$x' = -y , y' = x , \theta' = \theta - \frac{\pi}{2}$$
+و اگر $\theta < \frac{-\pi}{2}$ باشد، در همان ابتدا تبدیل:
+$$x' = y , y' = -x , \theta' = \theta + \frac{\pi}{2}$$
+را اعمال می کنیم و الگوریتم را با $x' , y' , \theta'$ ادامه می دهیم.
+
+نکته دیگر مربوط به این است که دو شکل دیگر از الگوریتم CORDIC به نام های Hyperbolic و Linear یعنی هذلولوی و خطی وجود دارند و شکلی که در بالا آن را توصیف کردیم، شکل Circular یا دایروی آن بود. منطق کلی این روش ها مشابه بالا است، با این تفاوت که در شکل هذلولوی، از توابع هذلولوی استفاده شده و در شکل خطی، عملا به جای $\arctan(2^{-i})$ خود $2^{-i}$ قرار می گیرد. به جز این، این دو روش تنها در منفی یا مثبت بودن یکسری از عبارات با هم تفاوت دارند که به صورت خلاصه و به شکل متحدالشکل، می توان آن را به صورت زیر نمایش داد.
+
+$$x_{i+1}=x_{i}- \eta \cdot d_{i} \cdot y_{i} \cdot 2^{-i}$$
+
+$$\begin{array}{c}
+y_{i+1}=y_{i}+d_{i} x_{i} 2^{-i} \\
+\theta_{i+1}=\theta_{i}-d_{i} \cdot \xi_i \\
+\end{array}$$
+
+که $\eta$ و $\xi$ براساس جدول زیر هستند:
+
+$$\begin{array}{|c|c|c|}
+\hline \text { Mode } & \eta & \xi \\
+\hline \text {Linear} & 0 & 2^{-i} \\
+\hline \text {Circular} & 1 & \tan ^{-1}\left(2^{-i}\right) \\
+\hline \text {Hyperbolic} & -1 & \tanh ^{-1}\left(2^{-i}\right) \\
+\hline
+\end{array}$$
+
+
+در نهایت هم بعد از اعمال همه مراحل، باید $x$ و $y$ نهایی در ضریب $K$ که بالا نوشته شد، ضرب بشوند. این ضریب برای حالت هذلولوی، برابر $K = 1.2075$ و برای حالت خطی $K=1$ است.
+
+در نهایت لازم به ذکر است که هر چند الگوریتم چرخش، می تواند هر بردار اولیه ای را بچرخاند، اما در شکل استاندارد الگوریتم، بردار اولیه به صورت یکه و موازی محور $x$ داده می شو. در دو جدول زیر، این که ورودی ها و خروجی های هر کدام از این حالات در وضعیت استاندارد چه هستند، نمایش داده شده است:
+
+\begin{center}
+جدول ورودی های استاندارد:
+\end{center}
+$$\begin{array}{|c|c|c|c|}
+\hline \text { Mode } & x_{\text {input}} & y_{\text {input}} & \theta_{\text {input}} \\
+\hline \text {Linear} & \mathrm{x} & 0 & \mathrm{\theta} \\
+\hline \text {Circular} & 1 & 0 & \mathrm{\theta} \\
+\hline \text {Hyperbolic} & 1 & 0 & \mathrm{\theta} \\
+\hline
+\end{array}$$
+\\
+\\
+\begin{center}
+جدول خروجی های استاندارد:
+\end{center}
+$$\begin{array}{|c|c|c|c|}
+\hline \text { Mode } & x_{\text {output}} & y_{\text {output}} & \theta_{\text {output}} \\
+\hline \text {Linear} & x & x \times \theta & 0 \\
+\hline \text {Circular} & \cos (\theta) & \sin (\theta) & 0 \\
+\hline \text {Hyperbolic} & \cosh (\theta) & \sinh (\theta) & 0 \\
+\hline
+\end{array}$$
+
+\subsubsection{حالت Vectoring}
+
+پایه و اساس حالت Vectoring از نظر ریاضیاتی مشابه حالت Rotation است. با این تفاوت که در حالت Rotation ما قصد داشتیم یک بردار را به اندازه زاویه مشخص شده بچرخانیم، اما این جا قصد داریم یک بردار را طوری بچرخانیم که روی محور $x$ منطبق شده و در نتیجه این چرخش ها اندازه و زاویه اولیه اش با محور $x$ را پیدا کنیم. از نظر ریاضیاتی، همه مواردی که در بخش قبل گفته شده، در این جا هم برقرار است. فقط در این جا باید توجه کرد که در ابتدای کار، ما زاویه ای در اختیار نداریم و در عوض باید با استفاده از $x$ و $y$ داده شده، این زاویه را پیدا کنیم. مشابه بخش قبل، اساس کلی این الگوریتم هم براساس زوایا و بردارهای ناحیه اول و چهارم مختصات است. در نتیجه، اضافه کردن زوایا، بر این اساس انجام می شود که آیا $y$ بردار فعلی، مثبت است یا منفی، اگر منفی باشد، با افزایش زاویه و اگر مثبت باشد، با کاهش زاویه رو به رو هستیم. در اصل تفاوت اصلی این الگوریتم با الگوریتم بخش قبل، در مقدار $d_i$ است که به شکل زیر مشخص می شود:
+
+$$d_{i}=\left\{\begin{array}{ll}
+1 & \text { if } y_{i}<0 \\
+-1 & \text { if } y_{i} \geq 0
+\end{array}\right.$$
+
+\newpage
+معادلات اصلی الگوریتم، همان معادلات قبلی است:
+
+$$x_{i+1}=x_{i}- \eta \cdot d_{i} \cdot y_{i} \cdot 2^{-i}$$
+
+$$\begin{array}{c}
+y_{i+1}=y_{i}+d_{i} x_{i} 2^{-i} \\
+\theta_{i+1}=\theta_{i}-d_{i} \ cdot \xi_i \\
+\end{array}$$
+
+
+در حالاتی که ورودی و خروجی در ناحیه اول یا چهارم نباشند، تبدیل هایی مانند تبدیل های بخش قبل صورت می گیرد، با این تفاوت که در این جا، معیار ما مثبت یا منفی بودن $x$ و $y$ است. اگر $x$ منفی و $y$ مثبت باشد یعنی در ناحیه دوم هستیم و تبدیل زیر اعمال می شود:
+$$x' = y , y' = -x , \theta' =  \frac{\pi}{2}$$
+و اگر $x$ منفی و $y$ هم منفی باشد، یعنی در ناحیه سوم هستیم و تبدیل زیر اعمال می شود:
+$$x' = -y , y' = x , \theta' =  \frac{-\pi}{2}$$
+توجه داشته باشید که در این حالت، در ابتدا $\theta =0$ است، چون چیزی در مورد زاویه نمی دانیم و هدف پیدا کردن زاویه است. بعد از انجام تبدیلات، الگوریتم را با استفاده از $x' , y' , \theta'$ پی می گیریم.
+
+
+جدول ورودی و خروجی های استاندارد این حالت به صورت زیر است:
+
+
+\begin{center}
+جدول ورودی های استاندارد:
+\end{center}
+$$\begin{array}{|c|c|c|c|}
+\hline \text { Mode } & x_{\text {input}} & \text {yinput} & \theta_{\text {input}} \\
+\hline \text {Linear} & x & y & 0 \\
+\hline \text {Circular} & x & y & 0 \\
+\hline \text {Hyperbolic} & x & y & 0 \\
+\hline
+\end{array}$$
+\\
+\\
+\begin{center}
+جدول خروجی های استاندارد:
+\end{center}
+
+$$\begin{array}{|c|c|c|c|}
+\hline \text { Mode } & x_{\text {output}} & y_\text{output} & \theta_{\text {output}} \\
+\hline \text {Linear} & x & 0 & \frac{y}{x} \\
+\hline \text {Circular} & \sqrt{x^{2}+y^{2}} & 0 & \tan ^{-1} \frac{y}{x} \\
+\hline \text {Hyperbolic} & \sqrt{x^{2}-y^{2}} & 0 & \tanh ^{-1} \frac{y}{x} \\
+\hline
+\end{array}$$
+
+ 
+ 
+\newpage
+
+\subsection{شکل دقیق الگوریتم}
+
+در الگوریتم های زیر، $\theta$ را با $z$ نمایش داده ایم. الگوریتم ها براساس حالت Circular نوشته شده اند ولی تنها تفاوت دو حالت دیگر، همان طور که در بالا هم گفته شده، در علامت مثبت و منفی یکی از عبارات و همچنین استفاده از تابعی متفاوت با $\arctan$ است. ضمنا بهینه سازی های پیاده سازی سخت افزاری (نظیر این که عملا از یک $K$ ثابت استفاده خواهیم کرد) در زیر اعمال نشده و شکل کلی الگوریتم نوشته شده است.
+
+\begin{latin}
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\SetKwData{Left}{left}\SetKwData{This}{this}\SetKwData{Up}{up}
+\SetKwFunction{Union}{Union}\SetKwFunction{FindCompress}{FindCompress}
+\SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
+
+\SetAlgoLined
+\Input{$x_{in}$,$~~y_{in}$,$~~z_{in}$:angle,$~~n$:number-of-iterations}
+\Output{$x_{out}$ , $y_{out}$}
+
+  \eIf{$ ! (\frac{-\pi}{2} < z_{in} < \frac{\pi}{2})$}{
+  \eIf{$z_{in} > \frac{\pi}{2}$}{
+  $x = -y_{in}$\;
+  $y = x_{in}$\;
+  $z = z_{in} - \frac{\pi}{2}$\;
+  }{
+  $x = y_{in}$\;
+  $y = -x_{in}$\;
+  $z = z_{in} + \frac{\pi}{2}$\;
+  }
+   }{
+   $x = x_{in}$\;
+   $y = y_{in}$\;
+   $z = z_{in}$\;
+  }
+  $K = 1$\;
+  \For{$i\leftarrow 0$ \KwTo $n$}{
+  $ d= sgn(z)$\;
+  $x=x - d \cdot y \cdot 2^{-i}$ \;
+  $y = y + d \cdot x \cdot \cdot 2^{-i}$ \;
+  $z = z + d \cdot \arctan(2^{-i})$\;
+  $K = K \cdot \frac{1}{\sqrt{1 + 2^{- 2 i}}}$\;
+  
+  }
+  
+  $x_{out} = \frac{x}{K}$\;
+  $y_{out} = \frac{y}{K}$\;
+ 
+ \caption{CORDIC Rotation}
+\end{algorithm}
+\end{latin}
+
+\newpage
+
+
+\begin{latin}
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\SetKwData{Left}{left}\SetKwData{This}{this}\SetKwData{Up}{up}
+\SetKwFunction{Union}{Union}\SetKwFunction{FindCompress}{FindCompress}
+\SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
+
+\SetAlgoLined
+\Input{$x_{in}$,$~~y_{in}$,$~~z_{in}$:angle,$~~n$:number-of-iterations}
+\Output{$x_{out}$ , $z_{out}$}
+
+  \eIf{$ x_{in}<0$}{
+  \eIf{$y_{in}\geq 0$}{
+  $x = y_{in}$\;
+  $y = -x_{in}$\;
+  $z = +\frac{\pi}{2}$\;
+  }{
+  $x = -y_{in}$\;
+  $y = x_{in}$\;
+  $z = - \frac{\pi}{2}$\;
+  }
+   }{
+   $x = x_{in}$\;
+   $y = y_{in}$\;
+   $z = 0$\;
+  }
+  $K = 1$\;
+  \For{$i\leftarrow 0$ \KwTo $n$}{
+  $ d= sgn(y)$\;
+  $x=x - d \cdot y \cdot 2^{-i}$ \;
+  $y = y + d \cdot x \cdot \cdot 2^{-i}$ \;
+  $z = z + d \cdot \arctan(2^{-i})$\;  
+  $K = K \cdot \frac{1}{\sqrt{1 + 2^{- 2 i}}}$\;
+  }
+  
+  $x_{out} = \frac{x}{K}$\;
+  $z_{out} = z$\;
+ 
+ \caption{CORDIC Vectoring}
+\end{algorithm}
+\end{latin}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
