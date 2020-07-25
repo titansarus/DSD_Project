@@ -9,6 +9,11 @@
 \contentsline {subsubsection}{\numberline {1.5.1}سخت افزار}{10}{subsubsection.1.5.1}% 
 \contentsline {subsubsection}{\numberline {1.5.2}نرم افزار}{10}{subsubsection.1.5.2}% 
 \contentsline {section}{\numberline {2}پیاده سازی}{11}{section.2}% 
-\contentsline {subsection}{\numberline {2.1}شرح وظایف ماژول ها}{11}{subsection.2.1}% 
-\contentsline {subsubsection}{\numberline {2.1.1}Vectoring}{12}{subsubsection.2.1.1}% 
-\contentsline {section}{مراجع}{16}{section*.2}% 
+\contentsline {subsection}{\numberline {2.1}اسامی ماژول ها و اینترفیس های سیستم}{11}{subsection.2.1}% 
+\contentsline {subsubsection}{\numberline {2.1.1}Vectoring}{11}{subsubsection.2.1.1}% 
+\contentsline {subsubsection}{\numberline {2.1.2}Rotation}{13}{subsubsection.2.1.2}% 
+\contentsline {subsection}{\numberline {2.2}دیاگرام های بلوکی}{15}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}شرح وظایف ماژول ها}{18}{subsection.2.3}% 
+\contentsline {subsubsection}{\numberline {2.3.1}Vectoring}{19}{subsubsection.2.3.1}% 
+\contentsline {subsubsection}{\numberline {2.3.2}ROTATION}{22}{subsubsection.2.3.2}% 
+\contentsline {section}{مراجع}{27}{section*.2}% 

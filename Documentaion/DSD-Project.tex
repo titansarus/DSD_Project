@@ -508,6 +508,362 @@ $$\begin{array}{|c|c|c|c|}
 
 
 \section{پیاده سازی}
+\subsection{اسامی ماژول ها و اینترفیس های سیستم}
+
+\subsubsection{Vectoring}
+
+
+ 
+ مازول \lr{Quadrant\_Corrector} 
+
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input [31:0] x,
+input [31:0] y,
+input[31:0] angle,
+\end{verbatim}
+\end{latin}
+
+و خروجی های آن:
+
+\begin{latin}
+\begin{verbatim}
+output reg [31:0] x_out,
+output reg [31:0] y_out,
+output reg [31:0] angle_out
+\end{verbatim}
+\end{latin}
+
+\hrulefill
+
+
+ماژول  \lr{Scaler} 
+ 
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input [31:0] number,
+input [1:0] mode
+\end{verbatim}
+\end{latin}
+
+و خروجی آن:
+
+\begin{latin}
+\begin{verbatim}
+output [31:0] answer
+\end{verbatim}
+\end{latin}
+
+\hrulefill
+
+
+ماژول  \lr{X\_Calculator}
+
+ 
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input[31:0] x,
+input[31:0] y,
+input [31:0] angle,
+input [1:0] mode,
+input [31:0] y_shift,
+input clock
+\end{verbatim}
+\end{latin}
+
+و خروجی آن:
+
+\begin{latin}
+\begin{verbatim}
+output [31:0] x_out
+\end{verbatim}
+\end{latin}
+
+
+\hrulefill
+ 
+
+ماژول  \lr{Y\_Calculator}
+ 
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input[31:0] x,
+input[31:0] y,
+input [31:0] angle,
+input [31:0] x_shift,
+input clock
+\end{verbatim}
+\end{latin}
+
+و خروجی آن:
+
+\begin{latin}
+\begin{verbatim}
+output [31:0] y_out
+\end{verbatim}
+\end{latin}
+
+
+\hrulefill
+
+
+ماژول \lr{Z\_Calculator}
+
+ 
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input [31:0] angle,
+input [31:0] y,
+input [31:0] lookup_table_amount,
+input clock,
+\end{verbatim}
+\end{latin}
+
+و خروجی آن:
+
+\begin{latin}
+\begin{verbatim}
+ output wire [31:0] angle_out
+\end{verbatim}
+\end{latin}
+
+\hrulefill
+
+
+ ماژول اصلی  \lr{CORDIC\_Vector.v} 
+
+\begin{latin}
+\begin{verbatim}
+input signed [31:0] x,
+input signed [31:0] y,
+input signed [31:0] angle,
+input [1:0] mode
+\end{verbatim}
+\end{latin}
+
+و خروجی های آن:
+
+\begin{latin}
+\begin{verbatim}
+ output wire signed [31:0] rotated_x,
+ output wire signed [31:0] rotated_y,
+ output wire signed [31:0] final_angle
+\end{verbatim}
+\end{latin}
+
+
+پارامتر برنامه هم:
+
+\begin{latin}
+\begin{verbatim}
+parameter NUMBER_OF_ITERATIONS = 17;
+\end{verbatim}
+\end{latin}
+
+
+\newpage
+\subsubsection{Rotation}
+
+
+
+ مازول \lr{Quadrant\_Corrector} 
+
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input [31:0] x,
+input [31:0] y,
+input[31:0] angle,
+\end{verbatim}
+\end{latin}
+
+و خروجی های آن:
+
+\begin{latin}
+\begin{verbatim}
+output reg [31:0] x_out,
+output reg [31:0] y_out,
+output reg [31:0] angle_out
+\end{verbatim}
+\end{latin}
+
+\hrulefill
+
+
+ماژول  \lr{Scaler} 
+ 
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input [31:0] number,
+input [1:0] mode
+\end{verbatim}
+\end{latin}
+
+و خروجی آن:
+
+\begin{latin}
+\begin{verbatim}
+output [31:0] answer
+\end{verbatim}
+\end{latin}
+
+\hrulefill
+
+
+ماژول  \lr{X\_Calculator}
+
+ 
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input[31:0] x,
+input[31:0] y,
+input [31:0] angle,
+input [1:0] mode,
+input [31:0] y_shift,
+input clock
+\end{verbatim}
+\end{latin}
+
+و خروجی آن:
+
+\begin{latin}
+\begin{verbatim}
+output [31:0] x_out
+\end{verbatim}
+\end{latin}
+
+
+\hrulefill
+ 
+
+ماژول  \lr{Y\_Calculator}
+ 
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input[31:0] x,
+input[31:0] y,
+input [31:0] angle,
+input [31:0] x_shift,
+input clock
+\end{verbatim}
+\end{latin}
+
+و خروجی آن:
+
+\begin{latin}
+\begin{verbatim}
+output [31:0] y_out
+\end{verbatim}
+\end{latin}
+
+
+\hrulefill
+
+
+ماژول \lr{Z\_Calculator}
+
+ 
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input [31:0] angle,
+input [31:0] y,
+input [31:0] lookup_table_amount,
+input clock,
+\end{verbatim}
+\end{latin}
+
+و خروجی آن:
+
+\begin{latin}
+\begin{verbatim}
+ output wire [31:0] angle_out
+\end{verbatim}
+\end{latin}
+
+\hrulefill
+
+
+ ماژول اصلی  \lr{CORDIC\_Rotation} 
+
+\begin{latin}
+\begin{verbatim}
+input signed [31:0] x,
+input signed [31:0] y,
+input signed [31:0] angle,
+input [1:0] mode
+\end{verbatim}
+\end{latin}
+
+و خروجی های آن:
+
+\begin{latin}
+\begin{verbatim}
+ output wire signed [31:0] rotated_x,
+ output wire signed [31:0] rotated_y,
+ output wire signed [31:0] final_angle
+\end{verbatim}
+\end{latin}
+
+
+پارامتر برنامه هم:
+
+\begin{latin}
+\begin{verbatim}
+parameter NUMBER_OF_ITERATIONS = 29;
+\end{verbatim}
+\end{latin}
+
+
+
+\newpage
+
+\subsection{دیاگرام های بلوکی}
+
+
+دیاگرام های بلوکی از صفحه بعد قرار گرفته اند. به ترتیب ابتدا دیاگرام های بلوکی مربوط به Vectoring و سپس Rotation قرار گرفته اند. در صفحه اول هر کدام، ماژول ها و ورودی-خروجی هایشان قرار گرفته و صفحه بعدی، اتصالات درونی آن ها.
+
+\newpage
+
+\begin{landscape}
+
+\thispagestyle{empty}
+
+\includepdf[pages=1,angle=90, ]{CORDICVECTOR.pdf}
+
+
+\end{landscape}
+
+
+\newpage
+
+\begin{landscape}
+
+\thispagestyle{empty}
+
+\includepdf[pages=1,angle=90, ]{CORDICROTATION.pdf}
+
+
+\end{landscape}
+\newpage
 
 \subsection{شرح وظایف ماژول ها}
 
@@ -655,7 +1011,7 @@ output [31:0] x_out
 
 سه ورودی اول که مشخص هستند. ورودی چهارم مربوط به همین است که در حالت CIRCULAR هستیم یا HYPERBOLIC یا LINEAR. ورودی پنجم که \lr{y\_shift} است، در اصل همان مقدار $y_i \times 2^{-i}$ در فرمول هاست که از ماژول اصلی به عنوان ورودی وارد این ماژول می شود. در نهایت هم clock را داریم که برای اجرای مرحله به مرحله سیستم به صورت \lr{Pipeline}، وجود کلاک که باعث ذخیره شدن و باقی ماندن مقادیر در رجیستر ها بشود، ضروری است.
 
-درون این ماژول براساس ورودی های داده شده، محاسبات طبق فرمول های بخش ریاضی انجام شده و مقدار جدید $x$ تحت نام \lr{x\_out} خروجی داده می شود.
+درون این ماژول براساس ورودی های داده شده، محاسبات طبق فرمول های بخش ریاضی و براساس علامت $y$ انجام شده و مقدار جدید $x$ تحت نام \lr{x\_out} خروجی داده می شود.
 
 \hrulefill
  
@@ -716,7 +1072,7 @@ $\arctanh (2^{-1})$
 
 \hrulefill
 
-فایل ماژول اصلی این پروژه، \lr{CORDIC\_Vector.v} نام دارد. ورودی های آن موارد زیر هستند:
+فایل ماژول اصلی این پروژه، \lr{CORDIC\_Vector} نام دارد. ورودی های آن موارد زیر هستند:
 
 \begin{latin}
 \begin{verbatim}
@@ -749,6 +1105,247 @@ parameter NUMBER_OF_ITERATIONS = 17;
 
 است. مقدار پیش فرض 17 از این رو قرار گرفته است که بهترین نتیجه ای که در تست های مختلف دریافت کردیم، برای ورودی و خروجی 32 بیتی، در حالت Vectoring مقدار 17، نتیجه مناسبی ارائه می داد و مقادیر بیش تر بعضا منجر به ایجاد Overflow در محاسبات شده و مقادیر کمتر هم دقت را کاهش می دادند.
 
+
+ابتدا به تعداد Iteration های برنامه، یک آرایه از Vector های 32 بیتی Wire برای ایجاد ارتباطات میان خروجی $x,y,angle$ مراحل مختلف ایجاد کرده ایم که \lr{x\_prime}، \lr{y\_prime} و \lr{rotated\_angles} نام دارند.
+
+در ابتدا، یک Instance از ماژول \lr{Quadrant\_Corrector} ساخته شده که وضعیت زاویه و ورودی های اصلی برنامه را مشخص کند و مقادیر خروجی آن، به مقادیر اندیس صفر  \lr{x\_prime}، \lr{y\_prime} و \lr{rotated\_angles} وصل می شوند.
+
+سپس از طریق Generate به تعداد Iteration هایی که از طریق پارامتر تعریف شده است، instance از ماژول \lr{Y\_Calculator}، \lr{X\_Calculator} و \lr{Z\_Calculator} ساخته ایم. یکسری متغیر temp هم وجود دارند که مقادیر مربوط به $\arctan$ یا $\arctanh$ و همچنین شیفت داده شده $X$ و $Y$ به اندازه $i$ را که اندیس همان مرحله باشد، به عنوان وردی به این ماژول ها متصل کنند.
+
+بعد از بخش Generate، دو Instance از \lr{Scaler} ساخته شده که خروجی های مرحله آخر ماژول ها که یعنی اندیس
+$NUMBER\_OF\_ITERATIONS - 1$
+ام
+ \lr{x\_prime}،
+  \lr{y\_prime} به آن ها وصل شده تا متناسب با mode با ضریب $K$ مشخص Scale بشوند.
+
+در نهایت این خروجی ها به عنوان خروجی اصلی برنامه داده شده اند.
+
+در انتهای این کد، یک تابع به نام Lookup وجود دارد که Index و mode را ورودی گرفته و براساس آن، مقدار متناسب را از بین جدول $\arctan$ یا $\arctanh$ یا $2^{-i}$ خروجی می دهد. دلیل این که از از تابع استفاده کردیم، این است که در اصل مقادیر این تابع، به عنوان یکسری ثابت که از طریق Mux انتخاب می شوند، در حین Instantiate شدن ماژول های درون Generate به آن ها داده می شوند و نیازی نیست که از یک ROM جداگانه استفاده کنیم. زیرا در صورت استفاده از ROM باید امکان خوانده شدن همزمان حدود 32 مقدار مختلف را در بدترین حالت برای آن فراهم می کردیم تا همه مراحل سیستم بتوانند به صورت Pipeline و مستقل از هم کار بکنند که هزینه اجرایی بالایی داشت و از این رو آن را به صورت تابع پیاده سازی کردیم.
+
+
+\subsubsection{ROTATION}
+بخش زیادی از ماژول های استفاده شده در این بخش، مشابه بخش قبل است اما برای کامل بودن گزارش، توضیحات آن ها مجددا مانند بخش قبل آورده شده است.
+
+
+
+
+قبل از اشاره به ماژول های اصلی پروژه، می بایست به فایل ثوابت یا \lr{CONSTANTS.v} اشاره کنیم. در این فایل از طریق \lr{`define} سه ثابت به صورت زیر تعریف شده است:
+\begin{latin}
+\begin{verbatim}
+`define CIRCULAR 2'b01
+`define LINEAR 2'b00
+`define HYPERBOLIC 2'b11
+\end{verbatim}
+\end{latin}
+
+این فایل از طریق \lr{`include} در سایر ماژول ها قرار گرفته است.
+
+ماژول ها را در دادامه به ترتیب Bottom-Up شرح می دهیم.
+
+اولین ماژول \lr{Quadrant\_Corrector} است که در فایل هم نام خودش قرار دارد. 
+
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input [31:0] x,
+input [31:0] y,
+input[31:0] angle,
+\end{verbatim}
+\end{latin}
+
+و خروجی های آن:
+
+\begin{latin}
+\begin{verbatim}
+output reg [31:0] x_out,
+output reg [31:0] y_out,
+output reg [31:0] angle_out
+\end{verbatim}
+\end{latin}
+
+وظیفه این ماژول این است که اگر زاویه داده شده در بازه
+ $\frac{-\pi}{2} < angle < \frac{pi}{2}$
+ یا به بیان دیگر،
+ $270 < angle \leq 360$
+ یا
+ $0 \leq angle <90$
+ قرار نداشت،
+یعنی تبدیل متناسب با ناحیه اول و چهارم قرار نداشت، از طریق تبدیل هایی که در بخش ریاضی نوشتیم، آن ها را به ناحیه اول یا چهارم منتقل کرده و برای حالتی که در ناحیه دوم باشند، زاویه اولیه خروجی را $90$ درجه کم کرده و در حالتی که در ناحیه سوم باشند، زاویه اولیه خروجی را $90$ درجه افزایش بدهد (به بیان دیگر $270$ درجه کم کند) تا در ناحیه چهارم قرار بگیرد و متناسب با آن تغییرات را روی $x$ و $y$ هم اعمال کند.
+
+
+\hrulefill
+
+ماژول بعدی \lr{Scaler} است که در فایل هم نام خودش قرار دارد.
+
+ 
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input [31:0] number,
+input [1:0] mode
+\end{verbatim}
+\end{latin}
+
+و خروجی آن:
+
+\begin{latin}
+\begin{verbatim}
+output [31:0] answer
+\end{verbatim}
+\end{latin}
+
+است. ورودی mode بیانگر این است که وضعیت برنامه در حالت CIRCULAR یا HYPERBOLIC یا LINEAR قرار دارد و براساس ثابت های \lr{CONSTANTS.v} مشخص می شود. وظیفه کلی این ماژول این است که عدد داده شده را متناسب با حالت داده شده در ضریب $K$ مناسب ضرب کند. برای حالت CIRCULAR این $K$ برابر $0.6073$ برای HYPERBOLIC برابر $1.2075$ و در حالت LINEAR برابر $1$ است. برای این که در ضرب کردن، از ماژول ضرب کننده استفاده نکنیم، برای ضرب در این اعداد از ترکیب شیفت و جمع استفاده می کنیم. به عنوان مثال
+$$0.6073 \approx 2^{-1} + 2^{-4} + 2^{-5} + 2^{-7} + 2^{-7} + 2^{-10} + 2^{-11} + 2^{-12} + 2^{-13}$$
+است در نتیجه، این جمع را به این شکل انجام می دهیم:
+
+\begin{latin}
+\begin{verbatim}
+(number >>> 1) +(number >>>4) + (number>>>5)
++ (number>>>7) + (number>>>8) + (number>>>10) +
+ (number>>>11) + (number>>>12) + (number>>>13);
+\end{verbatim}
+\end{latin}
+
+در مورد $1.2075$ هم روش مشابهی اعمال می کنیم، با این تفاوت که وجود $1$ در عدد $1.2075$ یعنی یکی از بخش های جمع شونده، خود عدد اصلی بدون هیچ نوع شیفت اضافی است.
+
+\hrulefill
+
+ماژول بعدی \lr{X\_Calculator} است که در فایل هم نام خودش قرار دارد.
+
+ 
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input[31:0] x,
+input[31:0] y,
+input [31:0] angle,
+input [1:0] mode,
+input [31:0] y_shift,
+input clock
+\end{verbatim}
+\end{latin}
+
+و خروجی آن:
+
+\begin{latin}
+\begin{verbatim}
+output [31:0] x_out
+\end{verbatim}
+\end{latin}
+
+سه ورودی اول که مشخص هستند. ورودی چهارم مربوط به همین است که در حالت CIRCULAR هستیم یا HYPERBOLIC یا LINEAR. ورودی پنجم که \lr{y\_shift} است، در اصل همان مقدار $y_i \times 2^{-i}$ در فرمول هاست که از ماژول اصلی به عنوان ورودی وارد این ماژول می شود. در نهایت هم clock را داریم که برای اجرای مرحله به مرحله سیستم به صورت \lr{Pipeline}، وجود کلاک که باعث ذخیره شدن و باقی ماندن مقادیر در رجیستر ها بشود، ضروری است.
+
+درون این ماژول براساس ورودی های داده شده، محاسبات طبق فرمول های بخش ریاضی براساس علامت $angle$ که با توجه به فرمت خاصی که برای انکود کردن انتخاب کردیم، در بیت $31$ ام آن (اندیس $30$) قرار دارد، انجام شده و مقدار جدید $x$ تحت نام \lr{x\_out} خروجی داده می شود.
+
+\hrulefill
+ 
+
+ماژول بعدی \lr{Y\_Calculator} است که در فایل هم نام خودش قرار دارد.
+
+ 
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input[31:0] x,
+input[31:0] y,
+input [31:0] angle,
+input [31:0] x_shift,
+input clock
+\end{verbatim}
+\end{latin}
+
+و خروجی آن:
+
+\begin{latin}
+\begin{verbatim}
+output [31:0] y_out
+\end{verbatim}
+\end{latin}
+
+این ماژول از نظر ورودی ها کاملا مشابه \lr{X\_Calculator} است، با این تفاوت که از آن جایی که نیازی به جز این که در این جا نیازی به دانستن mode نداریم و به عنوان ورودی داده نشده است. هدف این ماژول هم انجام محاسبات مربوط به $y$ است.
+
+\hrulefill
+
+
+ماژول بعدی \lr{Z\_Calculator} است که در فایل هم نام خودش قرار دارد.
+
+ 
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input [31:0] angle,
+input [31:0] y,
+input [31:0] lookup_table_amount,
+input clock,
+\end{verbatim}
+\end{latin}
+
+و خروجی آن:
+
+\begin{latin}
+\begin{verbatim}
+ output wire [31:0] angle_out
+\end{verbatim}
+\end{latin}
+
+این ماژول هم از نظر عملکردی، مشابه دو ماژول قبلی است. تنها نکته این جاست که یک مقدار تحت نام \lr{lookup\_table\_amount} به آن ورودی داده می شود که در اصل، مقداری برابر با $2^{-i}$ یا $\arctan (2^{-1})$ یا
+$\arctanh (2^{-1})$
+است که از طریق یک تابع در ماژول اصلی تولید شده و به بسته به مود کلی سیستم، به عنوان ورودی به این ماژول که محاسبه کننده $Z$ یا همان $angle$ و زاویه بعدی است، داده می شود.
+
+\hrulefill
+
+فایل ماژول اصلی این پروژه، \lr{CORDIC\_Rotation} نام دارد. ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input signed [31:0] x,
+input signed [31:0] y,
+input signed [31:0] angle,
+input [1:0] mode
+\end{verbatim}
+\end{latin}
+
+و خروجی های آن:
+
+\begin{latin}
+\begin{verbatim}
+ output wire signed [31:0] rotated_x,
+ output wire signed [31:0] rotated_y,
+ output wire signed [31:0] final_angle
+\end{verbatim}
+\end{latin}
+
+هستند. دلیل این که 32 بیتی در نظر گرفتیم، این بود که در حالت 16 بیتی، برای بسیاری از ورودی ها خروجی برنامه دقت کافی را نداشت.
+
+پارامتر برنامه هم:
+
+\begin{latin}
+\begin{verbatim}
+parameter NUMBER_OF_ITERATIONS = 29;
+\end{verbatim}
+\end{latin}
+
+
+ابتدا به تعداد Iteration های برنامه، یک آرایه از Vector های 32 بیتی Wire برای ایجاد ارتباطات میان خروجی $x,y,angle$ مراحل مختلف ایجاد کرده ایم که \lr{x\_prime}، \lr{y\_prime} و \lr{rotated\_angles} نام دارند.
+
+در ابتدا، یک Instance از ماژول \lr{Quadrant\_Corrector} ساخته شده که وضعیت زاویه و ورودی های اصلی برنامه را مشخص کند و مقادیر خروجی آن، به مقادیر اندیس صفر  \lr{x\_prime}، \lr{y\_prime} و \lr{rotated\_angles} وصل می شوند.
+
+سپس از طریق Generate به تعداد Iteration هایی که از طریق پارامتر تعریف شده است، instance از ماژول \lr{Y\_Calculator}، \lr{X\_Calculator} و \lr{Z\_Calculator} ساخته ایم. یکسری متغیر temp هم وجود دارند که مقادیر مربوط به $\arctan$ یا $\arctanh$ و همچنین شیفت داده شده $X$ و $Y$ به اندازه $i$ را که اندیس همان مرحله باشد، به عنوان وردی به این ماژول ها متصل کنند.
+
+بعد از بخش Generate، دو Instance از \lr{Scaler} ساخته شده که خروجی های مرحله آخر ماژول ها که یعنی اندیس
+$NUMBER\_OF\_ITERATIONS - 1$
+ام
+ \lr{x\_prime}،
+  \lr{y\_prime} به آن ها وصل شده تا متناسب با mode با ضریب $K$ مشخص Scale بشوند.
+
+در نهایت این خروجی ها به عنوان خروجی اصلی برنامه داده شده اند.
+
+در انتهای این کد، یک تابع به نام Lookup وجود دارد که Index و mode را ورودی گرفته و براساس آن، مقدار متناسب را از بین جدول $\arctan$ یا $\arctanh$ یا $2^{-i}$ خروجی می دهد. دلیل این که از از تابع استفاده کردیم، این است که در اصل مقادیر این تابع، به عنوان یکسری ثابت که از طریق Mux انتخاب می شوند، در حین Instantiate شدن ماژول های درون Generate به آن ها داده می شوند و نیازی نیست که از یک ROM جداگانه استفاده کنیم. زیرا در صورت استفاده از ROM باید امکان خوانده شدن همزمان حدود 32 مقدار مختلف را در بدترین حالت برای آن فراهم می کردیم تا همه مراحل سیستم بتوانند به صورت Pipeline و مستقل از هم کار بکنند که هزینه اجرایی بالایی داشت و از این رو آن را به صورت تابع پیاده سازی کردیم.
 
 
 

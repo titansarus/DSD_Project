@@ -68,7 +68,7 @@ assign final_angle = rotated_angles[NUMBER_OF_ITERATIONS-1];
 
  function [31:0] Lookup;
  
-    input [3:0] index; input [1:0] mode;
+    input [4:0] index; input [1:0] mode;
      begin : funcbody
     //LINEAR = 00 , CIRCULAR = 10, HYPERBOLIC = 11
 
