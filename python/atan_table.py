@@ -20,6 +20,11 @@ def xyConverter(x):
 def angleConverter(angle):
     print(angle * 2 ** (-31) * 360)
 
+def degToBinary(angle):
+    print(tobin(angle /360 * 2**31 ,32))
+def xyToBinary(x):
+    print(tobin(x* 2**20,32))
+
 
 k = 0.6073
 
