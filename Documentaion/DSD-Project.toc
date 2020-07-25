@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}مقدمه}{2}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}معرفی اجمالی و تاریخچه}{2}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}هدف الگوریتم}{2}{subsection.1.2}% 
+\contentsline {subsection}{\numberline {1.3}پایه ریاضی}{3}{subsection.1.3}% 
+\contentsline {subsubsection}{\numberline {1.3.1}حالت Rotation}{3}{subsubsection.1.3.1}% 
+\contentsline {subsubsection}{\numberline {1.3.2}حالت Vectoring}{6}{subsubsection.1.3.2}% 
+\contentsline {subsection}{\numberline {1.4}شکل دقیق الگوریتم}{8}{subsection.1.4}% 
+\contentsline {subsection}{\numberline {1.5}کاربردها}{10}{subsection.1.5}% 
+\contentsline {subsubsection}{\numberline {1.5.1}سخت افزار}{10}{subsubsection.1.5.1}% 
+\contentsline {subsubsection}{\numberline {1.5.2}نرم افزار}{10}{subsubsection.1.5.2}% 
+\contentsline {section}{مراجع}{11}{section*.2}% 
