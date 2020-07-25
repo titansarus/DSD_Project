@@ -32,6 +32,8 @@
 \usetikzlibrary{shapes.multipart}
 
 
+\DeclareMathOperator\arctanh{arctanh}
+
 \usepackage[T1]{fontenc}
 \usepackage{tikz}
 \usepackage[utf8]{inputenc} % Required for inputting international characters
@@ -55,6 +57,8 @@
 \definecolor{deepblue}{rgb}{0,0,0.5}
 \definecolor{deepred}{rgb}{0.6,0,0}
 \definecolor{deepgreen}{rgb}{0,0.5,0}
+
+\hypersetup{citecolor=blue}
 
 \newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
 \def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
@@ -502,6 +506,253 @@ $$\begin{array}{|c|c|c|c|}
 
 \newpage
 
+
+\section{پیاده سازی}
+
+\subsection{شرح وظایف ماژول ها}
+
+در فایل های قرار داده شده، دو پوشه جدا داریم. یکی Rotation و دیگری Vectoring که هر کدام مختص به پروژه مربوط به خود هستند. البته ساختار بسیاری از ماژول های آنان، مشابه است اما از آن جایی که دو پروژه مجزا بودند، ما هم آنان را به صورت دو پوشه و پروژه مجزا قرار داده ایم. اما پیش از توضیح در مورد خود ماژول ها، باید در مورد نحوه انکود کردن اعداد به صورت باینری توضیح داده بشود.
+
+برای انکود کردن زاویه ها، آن ها را بر $360$ تقسیم کرده و سپس در $2^{31}$ ضرب می کنیم و عدد حاصل را به صورت $32$ بیتی نمایش می دهیم. یعنی با فرمول زیر:
+$$\frac{\text{Angle}}{360} \times 2^{31} \rightarrow 32 ~~\text{\lr{bit binary number}}$$
+ مثلا زوایای $45$ درجه، $135$ درجه، $225$ درجه و $315$ درجه، به شکل زیر می شوند:
+
+\begin{latin}
+\begin{verbatim}
+
+ 45 deg: 32'b00010000000000000000000000000000
+135 deg: 32'b00110000000000000000000000000000
+225 deg: 32'b01010000000000000000000000000000
+315 deg: 32'b01110000000000000000000000000000
+
+\end{verbatim}
+\end{latin} 
+
+برای تبدیل برعکس آن هم عدد باینری را به صورت یک Integer در نظر می گیریم و عدد بدست آمده را بر $2^{31}$ تقسیم کرده و ضربدر $360$ می کنیم.
+
+
+دلیل این که ضرب را در $2^{31}$ انجام دادیم و نه $2^{32}$، این است که در حالت Linear نیاز به  تبدیل عدد $2^{0}$ به مقیاس انکود شده در بالا بدست می آمده است و اگر در $2^{32}$ ضرب انجام می شد، با مشکل Overflow رو به رو می شدیم.
+
+اعداد $x$ و $y$ هم به شکل Fixed-Point با $12$ رقم صحیح و $20$ رقم اعشاری انکود شده اند. در نتیجه برای تبدیل یک عدد به حالت نمایش داده شده $32$ بیتی باید از فرمول زیر استفاده کرد:
+
+$$\text{Number} \times 2^{20} \rightarrow 32 ~~\text{\lr{bit binary number}}$$
+
+و برای تبدیل برعکس هم باید عدد باینری $32$ بیتی گرفته شده را به صورت Integer در نظر گرفته و بر $2^{20}$ تقسیم کرد.
+
+مثلا عدد $120$، $2$ و $170.5$ در این انکودینگ به شکل زیر نمایش داده می شود.
+ 
+ 
+ \begin{latin}
+\begin{verbatim}
+
+  120: 32'b000001111000\_00000000000000000000
+    2: 32'b000000000010\_00000000000000000000
+170.5: 32'b000010101010\_10000000000000000000
+\end{verbatim}
+\end{latin} 
+
+ 
+\subsubsection{Vectoring}
+
+قبل از اشاره به ماژول های اصلی پروژه، می بایست به فایل ثوابت یا \lr{CONSTANTS.v} اشاره کنیم. در این فایل از طریق \lr{`define} سه ثابت به صورت زیر تعریف شده است:
+\begin{latin}
+\begin{verbatim}
+`define CIRCULAR 2'b01
+`define LINEAR 2'b00
+`define HYPERBOLIC 2'b11
+\end{verbatim}
+\end{latin}
+
+این فایل از طریق \lr{`include} در سایر ماژول ها قرار گرفته است.
+
+ماژول ها را در دادامه به ترتیب Bottom-Up شرح می دهیم.
+
+اولین ماژول \lr{Quadrant\_Corrector} است که در فایل هم نام خودش قرار دارد. 
+
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input [31:0] x,
+input [31:0] y,
+input[31:0] angle,
+\end{verbatim}
+\end{latin}
+
+و خروجی های آن:
+
+\begin{latin}
+\begin{verbatim}
+output reg [31:0] x_out,
+output reg [31:0] y_out,
+output reg [31:0] angle_out
+\end{verbatim}
+\end{latin}
+
+وظیفه این ماژول این است که اگر $x$ و $y$ ورودی در ناحیه اول یا چهارم قرار نداشتند، از طریق تبدیل هایی که در بخش ریاضی نوشتیم، آن ها را به ناحیه اول یا چهارم منتقل کرده و برای حالتی که در ناحیه دوم باشند، زاویه اولیه خروجی را $90$ درجه و در حالتی که در ناحیه سوم باشند، زاویه اولیه خروجی را $270$ درجه (معادل $-90$ درجه) قرار بدهد.
+
+\hrulefill
+
+ماژول بعدی \lr{Scaler} است که در فایل هم نام خودش قرار دارد.
+
+ 
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input [31:0] number,
+input [1:0] mode
+\end{verbatim}
+\end{latin}
+
+و خروجی آن:
+
+\begin{latin}
+\begin{verbatim}
+output [31:0] answer
+\end{verbatim}
+\end{latin}
+
+است. ورودی mode بیانگر این است که وضعیت برنامه در حالت CIRCULAR یا HYPERBOLIC یا LINEAR قرار دارد و براساس ثابت های \lr{CONSTANTS.v} مشخص می شود. وظیفه کلی این ماژول این است که عدد داده شده را متناسب با حالت داده شده در ضریب $K$ مناسب ضرب کند. برای حالت CIRCULAR این $K$ برابر $0.6073$ برای HYPERBOLIC برابر $1.2075$ و در حالت LINEAR برابر $1$ است. برای این که در ضرب کردن، از ماژول ضرب کننده استفاده نکنیم، برای ضرب در این اعداد از ترکیب شیفت و جمع استفاده می کنیم. به عنوان مثال
+$$0.6073 \approx 2^{-1} + 2^{-4} + 2^{-5} + 2^{-7} + 2^{-7} + 2^{-10} + 2^{-11} + 2^{-12} + 2^{-13}$$
+است در نتیجه، این جمع را به این شکل انجام می دهیم:
+
+\begin{latin}
+\begin{verbatim}
+(number >>> 1) +(number >>>4) + (number>>>5)
++ (number>>>7) + (number>>>8) + (number>>>10) +
+ (number>>>11) + (number>>>12) + (number>>>13);
+\end{verbatim}
+\end{latin}
+
+در مورد $1.2075$ هم روش مشابهی اعمال می کنیم، با این تفاوت که وجود $1$ در عدد $1.2075$ یعنی یکی از بخش های جمع شونده، خود عدد اصلی بدون هیچ نوع شیفت اضافی است.
+
+\hrulefill
+
+ماژول بعدی \lr{X\_Calculator} است که در فایل هم نام خودش قرار دارد.
+
+ 
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input[31:0] x,
+input[31:0] y,
+input [31:0] angle,
+input [1:0] mode,
+input [31:0] y_shift,
+input clock
+\end{verbatim}
+\end{latin}
+
+و خروجی آن:
+
+\begin{latin}
+\begin{verbatim}
+output [31:0] x_out
+\end{verbatim}
+\end{latin}
+
+سه ورودی اول که مشخص هستند. ورودی چهارم مربوط به همین است که در حالت CIRCULAR هستیم یا HYPERBOLIC یا LINEAR. ورودی پنجم که \lr{y\_shift} است، در اصل همان مقدار $y_i \times 2^{-i}$ در فرمول هاست که از ماژول اصلی به عنوان ورودی وارد این ماژول می شود. در نهایت هم clock را داریم که برای اجرای مرحله به مرحله سیستم به صورت \lr{Pipeline}، وجود کلاک که باعث ذخیره شدن و باقی ماندن مقادیر در رجیستر ها بشود، ضروری است.
+
+درون این ماژول براساس ورودی های داده شده، محاسبات طبق فرمول های بخش ریاضی انجام شده و مقدار جدید $x$ تحت نام \lr{x\_out} خروجی داده می شود.
+
+\hrulefill
+ 
+
+ماژول بعدی \lr{Y\_Calculator} است که در فایل هم نام خودش قرار دارد.
+
+ 
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input[31:0] x,
+input[31:0] y,
+input [31:0] angle,
+input [31:0] x_shift,
+input clock
+\end{verbatim}
+\end{latin}
+
+و خروجی آن:
+
+\begin{latin}
+\begin{verbatim}
+output [31:0] y_out
+\end{verbatim}
+\end{latin}
+
+این ماژول از نظر ورودی ها کاملا مشابه \lr{X\_Calculator} است، با این تفاوت که از آن جایی که نیازی به جز این که در این جا نیازی به دانستن mode نداریم و به عنوان ورودی داده نشده است. هدف این ماژول هم انجام محاسبات مربوط به $y$ است.
+
+\hrulefill
+
+
+ماژول بعدی \lr{Z\_Calculator} است که در فایل هم نام خودش قرار دارد.
+
+ 
+ ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input [31:0] angle,
+input [31:0] y,
+input [31:0] lookup_table_amount,
+input clock,
+\end{verbatim}
+\end{latin}
+
+و خروجی آن:
+
+\begin{latin}
+\begin{verbatim}
+ output wire [31:0] angle_out
+\end{verbatim}
+\end{latin}
+
+این ماژول هم از نظر عملکردی، مشابه دو ماژول قبلی است. تنها نکته این جاست که یک مقدار تحت نام \lr{lookup\_table\_amount} به آن ورودی داده می شود که در اصل، مقداری برابر با $2^{-i}$ یا $\arctan (2^{-1})$ یا
+$\arctanh (2^{-1})$
+است که از طریق یک تابع در ماژول اصلی تولید شده و به بسته به مود کلی سیستم، به عنوان ورودی به این ماژول که محاسبه کننده $Z$ یا همان $angle$ و زاویه بعدی است، داده می شود.
+
+\hrulefill
+
+فایل ماژول اصلی این پروژه، \lr{CORDIC\_Vector.v} نام دارد. ورودی های آن موارد زیر هستند:
+
+\begin{latin}
+\begin{verbatim}
+input signed [31:0] x,
+input signed [31:0] y,
+input signed [31:0] angle,
+input [1:0] mode
+\end{verbatim}
+\end{latin}
+
+و خروجی های آن:
+
+\begin{latin}
+\begin{verbatim}
+ output wire signed [31:0] rotated_x,
+ output wire signed [31:0] rotated_y,
+ output wire signed [31:0] final_angle
+\end{verbatim}
+\end{latin}
+
+هستند. دلیل این که 32 بیتی در نظر گرفتیم، این بود که در حالت 16 بیتی، برای بسیاری از ورودی ها خروجی برنامه دقت کافی را نداشت.
+
+پارامتر برنامه هم:
+
+\begin{latin}
+\begin{verbatim}
+parameter NUMBER_OF_ITERATIONS = 17;
+\end{verbatim}
+\end{latin}
+
+است. مقدار پیش فرض 17 از این رو قرار گرفته است که بهترین نتیجه ای که در تست های مختلف دریافت کردیم، برای ورودی و خروجی 32 بیتی، در حالت Vectoring مقدار 17، نتیجه مناسبی ارائه می داد و مقادیر بیش تر بعضا منجر به ایجاد Overflow در محاسبات شده و مقادیر کمتر هم دقت را کاهش می دادند.
+
+
+
+
+\newpage
 \medskip
 
 
