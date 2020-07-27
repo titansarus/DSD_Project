@@ -1,7 +1,7 @@
 from math import *
 
 
-def tobin(a, digits):
+def toBin(a, digits):
     answer = [0] * digits
     for i in range(digits):
         if (a // 2 ** (digits - i - 1) != 0):
@@ -22,11 +22,11 @@ def angleConverter(angle):
 
 
 def degToBinary(angle):
-    return tobin(angle /360 * 2**31 ,32)
+    return toBin(angle / 360 * 2 ** 31, 32)
 
 
 def xyToBinary(x):
-    return tobin(x* 2**20,32)
+    return toBin(x * 2 ** 20, 32)
 
 
 def writeToFileRotation(input_x, input_y, input_z, output_x, output_y, output_z):
@@ -51,26 +51,26 @@ def writeToFileVectoring(input_x, input_y, output_x, output_y, output_z):
 
 
 def printArcTanTable():
-    print(tobin(45 / 360 * 2 ** 31, 32))
-    print(tobin(135 / 360 * 2 ** 31, 32))
-    print(tobin(225 / 360 * 2 ** 31, 32))
-    print(tobin(315 / 360 * 2 ** 31, 32))
+    print(toBin(45 / 360 * 2 ** 31, 32))
+    print(toBin(135 / 360 * 2 ** 31, 32))
+    print(toBin(225 / 360 * 2 ** 31, 32))
+    print(toBin(315 / 360 * 2 ** 31, 32))
 
     for i in range(32):
         a = round(atan(2 ** (-i)) / (2 * pi) * (2 ** 31))
 
-        string = "assign atan_table[" + str(i) + "] \t= 32'b" + tobin(a, 32) + ";"
+        string = "assign atan_table[" + str(i) + "] \t= 32'b" + toBin(a, 32) + ";"
         print(string)
 
     print('\n')
     for i in range(1, 32):
         a = round(atanh(2 ** (-i)) * (2 ** 31))
 
-        string = "assign atanh_table[" + str(i) + "] \t= 32'b" + tobin(a, 32) + ";"
+        string = "assign atanh_table[" + str(i) + "] \t= 32'b" + toBin(a, 32) + ";"
         print(string)
     print('\n')
     for i in range(32):
         a = round((2 ** (-i)) * (2 ** 31))
 
-        string = "assign lin_table[" + str(i) + "] \t= 32'b" + tobin(a, 32) + ";"
+        string = "assign lin_table[" + str(i) + "] \t= 32'b" + toBin(a, 32) + ";"
         print(string)
