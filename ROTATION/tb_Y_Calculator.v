@@ -7,10 +7,11 @@ parameter DELAY_BETWEEN_TESTS = 10;
 
 reg clock;
 reg [31:0] y;
+reg [31:0] angle;
 reg [31:0] x_shift;
 wire [31:0] y_out;
 
-Y_Calculator yc(.clock(clock), .y(y), .x_shift(x_shift), .y_out(y_out));
+Y_Calculator yc(.clock(clock), .y(y), .angle(angle), .x_shift(x_shift), .y_out(y_out));
 
 initial 
   begin
@@ -25,12 +26,15 @@ always
 initial
   begin
        y <= 32'b00110000000000000000000000000000;
+       angle <= 32'b10000000000000000000000000000000;
        x_shift <= 32'b00001010000000000000000000000000;
        #DELAY_BETWEEN_TESTS
        y <= 32'b10100001000000000000000000000000;
+       angle <= 32'b00000000000000000000000000000001;
        x_shift <= 32'b01001010000000000000000000000101;
        #DELAY_BETWEEN_TESTS
        y <= 32'b00000010011011101000101101110101;
+       angle <= 32'b10000000000000000000000000000000;
        x_shift <= 32'b00000000000000000000000000000011;
   end
 
