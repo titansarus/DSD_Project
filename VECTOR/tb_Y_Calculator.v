@@ -6,13 +6,11 @@ parameter PERIOD = 5;
 parameter DELAY_BETWEEN_TESTS = 10;
 
 reg clock;
-reg [31:0] x;
 reg [31:0] y;
-reg [31:0] angle;
 reg [31:0] x_shift;
 wire [31:0] y_out;
 
-Y_Calculator yc(.clock(clock), .x(x), .y(y), .angle(angle), .x_shift(x_shift), .y_out(y_out));
+Y_Calculator yc(.clock(clock), .y(y), .x_shift(x_shift), .y_out(y_out));
 
 initial 
   begin

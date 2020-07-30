@@ -45,8 +45,7 @@ begin: iterations
 		
         X_Calculator xc(.x(x_prime[i]) , .y(y_prime[i]) , .angle(rotated_angles[i])
         , .mode (mode) , .y_shift(yshift) , .clock(clock) , .x_out(x_prime[i+1]));
-        Y_Calculator yc(.x(x_prime[i]) , .y(y_prime[i]) , .angle(rotated_angles[i])
-         , .x_shift(xshift) , .clock(clock) , .y_out(y_prime[i+1]));
+        Y_Calculator yc(.y(y_prime[i]), .x_shift(xshift) , .clock(clock) , .y_out(y_prime[i+1]));
         Z_Calculator zc(.angle(rotated_angles[i]) ,.y(y_prime[i]), .lookup_table_amount(lta) , .clock(clock) ,
          .angle_out(rotated_angles[i+1]));
 	

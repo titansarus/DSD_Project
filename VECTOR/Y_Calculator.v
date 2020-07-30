@@ -1,9 +1,7 @@
 `include "CONSTANTS.v"
 
 module Y_Calculator(
-    input[31:0] x,
     input[31:0] y,
-    input [31:0] angle,
     input [31:0] x_shift,
     input clock,
     output wire [31:0] y_out
