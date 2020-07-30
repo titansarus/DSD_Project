@@ -1,6 +1,6 @@
 `include "CONSTANTS.v"
 
-module tb_Quadrant_Corrector();
+module tb_Y_Calculator();
 
 parameter PERIOD = 5;
 parameter DELAY_BETWEEN_TESTS = 10;
