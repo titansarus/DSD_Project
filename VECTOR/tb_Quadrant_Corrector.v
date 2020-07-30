@@ -1,4 +1,3 @@
-
 `include "CONSTANTS.v"
 
 module tb_Quadrant_Corrector();
@@ -10,11 +9,9 @@ module tb_Quadrant_Corrector();
     wire [31:0] y_out;
     wire [31:0] angle_out;
 
-
-
     Quardrant_Corrector myQC(.x(x) , .y(y) , .angle(angle) , .x_out(x_out) , .y_out(y_out) , .angle_out(angle_out));
 
-    initial
+  initial
     begin
        x = 32'd20;
        y = 32'd40;
@@ -33,7 +30,5 @@ module tb_Quadrant_Corrector();
        angle = 32'b00101010101010101010101010101010;
 
     end
-
-
 
 endmodule

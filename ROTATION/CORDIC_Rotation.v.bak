@@ -8,7 +8,7 @@ module CORDIC_Rotation(input clock,
     output wire signed [31:0] rotated_x,
     output wire signed [31:0] rotated_y,
     output wire signed [31:0] final_angle);
-parameter NUMBER_OF_ITERATIONS = 15;
+parameter NUMBER_OF_ITERATIONS = 29;
 
 wire signed [31:0] x_prime [0:NUMBER_OF_ITERATIONS-1];
 wire signed [31:0] y_prime [0:NUMBER_OF_ITERATIONS-1];
