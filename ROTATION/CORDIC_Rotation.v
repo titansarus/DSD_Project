@@ -55,7 +55,7 @@ endgenerate
 
 
 
-wire [31:0] scaled_x , sacled_y;
+wire [31:0] scaled_x , scaled_y;
 
 Scaler scaler(.number(x_prime[NUMBER_OF_ITERATIONS-1]) , .mode(mode) , .answer(scaled_x));
 Scaler scaler2(.number(y_prime[NUMBER_OF_ITERATIONS-1]) , .mode(mode) , .answer(scaled_y));
