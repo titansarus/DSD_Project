@@ -33,7 +33,11 @@ module tb_Quadrant_Corrector();
        angle = 32'b00101010101010101010101010101010;
 
     end
-
+	
+ initial
+  begin
+    $monitor ("@", $time, "ns:   x_out = %b ", x_out, "y_out = %b ", y_out, "angle_out = %b ", angle_out);  
+  end
 
 
 endmodule
