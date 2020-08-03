@@ -20,7 +20,7 @@ integer file, content, i;
 reg [1:0] mode;
 reg clock;
 
-CORDIC_Vector cr (.clock(clock),.x(x) ,.y(y) , .angle(angle) , .mode(mode) , .rotated_x(rotated_x) , .rotated_y(rotated_y) , .final_angle(final_angle));
+TopModule cr (.clock(clock),.x(x) ,.y(y) , .angle(angle) , .mode(mode) , .rotated_x(rotated_x) , .rotated_y(rotated_y) , .final_angle(final_angle));
 
 initial 
   begin
