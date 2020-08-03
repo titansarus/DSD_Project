@@ -1,0 +1,395 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml TopModule.twx TopModule.ncd -o TopModule.twr TopModule.pcf
+
+Design file:              TopModule.ncd
+Physical constraint file: TopModule.pcf
+Device,package,speed:     xc6slx150t,fgg484,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clock
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+angle<0>    |    4.755(R)|      SLOW  |   -2.287(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<1>    |    4.750(R)|      SLOW  |   -2.205(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<2>    |    4.414(R)|      SLOW  |   -2.036(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<3>    |    4.876(R)|      SLOW  |   -2.340(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<4>    |    5.181(R)|      SLOW  |   -2.419(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<5>    |    6.268(R)|      SLOW  |   -3.247(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<6>    |    6.321(R)|      SLOW  |   -3.266(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<7>    |    5.958(R)|      SLOW  |   -3.153(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<8>    |    6.207(R)|      SLOW  |   -3.153(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<9>    |    6.554(R)|      SLOW  |   -3.272(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<10>   |    5.982(R)|      SLOW  |   -3.112(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<11>   |    5.726(R)|      SLOW  |   -3.028(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<12>   |    6.131(R)|      SLOW  |   -3.147(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<13>   |    5.959(R)|      SLOW  |   -2.902(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<14>   |    5.517(R)|      SLOW  |   -2.834(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<15>   |    5.697(R)|      SLOW  |   -3.001(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<16>   |    5.694(R)|      SLOW  |   -2.892(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<17>   |    5.652(R)|      SLOW  |   -2.940(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<18>   |    5.384(R)|      SLOW  |   -2.847(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<19>   |    5.380(R)|      SLOW  |   -2.814(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<20>   |    5.462(R)|      SLOW  |   -2.799(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<21>   |    5.376(R)|      SLOW  |   -2.839(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<22>   |    5.198(R)|      SLOW  |   -2.741(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<23>   |    5.202(R)|      SLOW  |   -2.806(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<24>   |    5.527(R)|      SLOW  |   -2.907(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<25>   |    5.446(R)|      SLOW  |   -2.875(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<26>   |    5.438(R)|      SLOW  |   -2.910(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<27>   |    4.892(R)|      SLOW  |   -2.651(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<28>   |    5.235(R)|      SLOW  |   -2.681(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<29>   |    9.186(R)|      SLOW  |   -3.026(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<30>   |    9.610(R)|      SLOW  |   -2.771(R)|      FAST  |clock_BUFGP       |   0.000|
+angle<31>   |    4.557(R)|      SLOW  |   -2.722(R)|      FAST  |clock_BUFGP       |   0.000|
+mode<0>     |   20.864(R)|      SLOW  |   -0.759(R)|      SLOW  |clock_BUFGP       |   0.000|
+mode<1>     |   17.305(R)|      SLOW  |   -0.538(R)|      SLOW  |clock_BUFGP       |   0.000|
+x<0>        |    9.250(R)|      SLOW  |   -3.394(R)|      FAST  |clock_BUFGP       |   0.000|
+x<1>        |    8.545(R)|      SLOW  |   -2.741(R)|      FAST  |clock_BUFGP       |   0.000|
+x<2>        |    8.579(R)|      SLOW  |   -2.939(R)|      FAST  |clock_BUFGP       |   0.000|
+x<3>        |    7.940(R)|      SLOW  |   -2.614(R)|      FAST  |clock_BUFGP       |   0.000|
+x<4>        |    7.692(R)|      SLOW  |   -2.690(R)|      FAST  |clock_BUFGP       |   0.000|
+x<5>        |    7.666(R)|      SLOW  |   -2.490(R)|      FAST  |clock_BUFGP       |   0.000|
+x<6>        |    7.329(R)|      SLOW  |   -2.522(R)|      FAST  |clock_BUFGP       |   0.000|
+x<7>        |    7.667(R)|      SLOW  |   -2.448(R)|      FAST  |clock_BUFGP       |   0.000|
+x<8>        |    7.789(R)|      SLOW  |   -2.381(R)|      FAST  |clock_BUFGP       |   0.000|
+x<9>        |    7.362(R)|      SLOW  |   -2.427(R)|      FAST  |clock_BUFGP       |   0.000|
+x<10>       |    7.858(R)|      SLOW  |   -2.459(R)|      FAST  |clock_BUFGP       |   0.000|
+x<11>       |    7.482(R)|      SLOW  |   -2.477(R)|      FAST  |clock_BUFGP       |   0.000|
+x<12>       |    5.566(R)|      SLOW  |   -1.283(R)|      FAST  |clock_BUFGP       |   0.000|
+x<13>       |    5.688(R)|      SLOW  |   -1.523(R)|      FAST  |clock_BUFGP       |   0.000|
+x<14>       |    5.526(R)|      SLOW  |   -1.464(R)|      FAST  |clock_BUFGP       |   0.000|
+x<15>       |    5.324(R)|      SLOW  |   -1.172(R)|      FAST  |clock_BUFGP       |   0.000|
+x<16>       |    5.709(R)|      SLOW  |   -1.558(R)|      FAST  |clock_BUFGP       |   0.000|
+x<17>       |    5.361(R)|      SLOW  |   -1.300(R)|      FAST  |clock_BUFGP       |   0.000|
+x<18>       |    5.609(R)|      SLOW  |   -1.528(R)|      FAST  |clock_BUFGP       |   0.000|
+x<19>       |    5.357(R)|      SLOW  |   -1.365(R)|      FAST  |clock_BUFGP       |   0.000|
+x<20>       |    6.140(R)|      SLOW  |   -1.628(R)|      FAST  |clock_BUFGP       |   0.000|
+x<21>       |    6.150(R)|      SLOW  |   -1.859(R)|      FAST  |clock_BUFGP       |   0.000|
+x<22>       |    5.852(R)|      SLOW  |   -1.750(R)|      FAST  |clock_BUFGP       |   0.000|
+x<23>       |    5.536(R)|      SLOW  |   -1.952(R)|      FAST  |clock_BUFGP       |   0.000|
+x<24>       |    6.032(R)|      SLOW  |   -1.887(R)|      FAST  |clock_BUFGP       |   0.000|
+x<25>       |    5.467(R)|      SLOW  |   -1.572(R)|      FAST  |clock_BUFGP       |   0.000|
+x<26>       |    5.687(R)|      SLOW  |   -1.888(R)|      FAST  |clock_BUFGP       |   0.000|
+x<27>       |    5.385(R)|      SLOW  |   -1.741(R)|      FAST  |clock_BUFGP       |   0.000|
+x<28>       |    5.990(R)|      SLOW  |   -2.072(R)|      FAST  |clock_BUFGP       |   0.000|
+x<29>       |    5.838(R)|      SLOW  |   -1.932(R)|      FAST  |clock_BUFGP       |   0.000|
+x<30>       |    5.923(R)|      SLOW  |   -2.122(R)|      FAST  |clock_BUFGP       |   0.000|
+x<31>       |    5.194(R)|      SLOW  |   -2.080(R)|      FAST  |clock_BUFGP       |   0.000|
+y<0>        |    9.320(R)|      SLOW  |   -3.248(R)|      FAST  |clock_BUFGP       |   0.000|
+y<1>        |    9.555(R)|      SLOW  |   -2.976(R)|      FAST  |clock_BUFGP       |   0.000|
+y<2>        |    8.892(R)|      SLOW  |   -3.058(R)|      FAST  |clock_BUFGP       |   0.000|
+y<3>        |    8.912(R)|      SLOW  |   -2.948(R)|      FAST  |clock_BUFGP       |   0.000|
+y<4>        |    8.786(R)|      SLOW  |   -2.822(R)|      FAST  |clock_BUFGP       |   0.000|
+y<5>        |    8.913(R)|      SLOW  |   -2.617(R)|      FAST  |clock_BUFGP       |   0.000|
+y<6>        |    8.712(R)|      SLOW  |   -2.976(R)|      FAST  |clock_BUFGP       |   0.000|
+y<7>        |    8.484(R)|      SLOW  |   -2.666(R)|      FAST  |clock_BUFGP       |   0.000|
+y<8>        |    8.675(R)|      SLOW  |   -2.706(R)|      FAST  |clock_BUFGP       |   0.000|
+y<9>        |    8.359(R)|      SLOW  |   -2.596(R)|      FAST  |clock_BUFGP       |   0.000|
+y<10>       |    8.202(R)|      SLOW  |   -2.430(R)|      FAST  |clock_BUFGP       |   0.000|
+y<11>       |    8.354(R)|      SLOW  |   -2.520(R)|      FAST  |clock_BUFGP       |   0.000|
+y<12>       |    8.158(R)|      SLOW  |   -2.195(R)|      FAST  |clock_BUFGP       |   0.000|
+y<13>       |    7.720(R)|      SLOW  |   -2.265(R)|      FAST  |clock_BUFGP       |   0.000|
+y<14>       |    7.847(R)|      SLOW  |   -2.258(R)|      FAST  |clock_BUFGP       |   0.000|
+y<15>       |    7.733(R)|      SLOW  |   -2.024(R)|      FAST  |clock_BUFGP       |   0.000|
+y<16>       |    7.542(R)|      SLOW  |   -2.289(R)|      FAST  |clock_BUFGP       |   0.000|
+y<17>       |    8.320(R)|      SLOW  |   -2.149(R)|      FAST  |clock_BUFGP       |   0.000|
+y<18>       |    6.643(R)|      SLOW  |   -1.862(R)|      FAST  |clock_BUFGP       |   0.000|
+y<19>       |    6.686(R)|      SLOW  |   -1.715(R)|      FAST  |clock_BUFGP       |   0.000|
+y<20>       |    8.559(R)|      SLOW  |   -2.687(R)|      FAST  |clock_BUFGP       |   0.000|
+y<21>       |    6.452(R)|      SLOW  |   -1.988(R)|      FAST  |clock_BUFGP       |   0.000|
+y<22>       |    5.939(R)|      SLOW  |   -1.941(R)|      FAST  |clock_BUFGP       |   0.000|
+y<23>       |    6.611(R)|      SLOW  |   -2.226(R)|      FAST  |clock_BUFGP       |   0.000|
+y<24>       |    6.162(R)|      SLOW  |   -1.691(R)|      FAST  |clock_BUFGP       |   0.000|
+y<25>       |    6.118(R)|      SLOW  |   -2.034(R)|      FAST  |clock_BUFGP       |   0.000|
+y<26>       |    6.024(R)|      SLOW  |   -1.898(R)|      FAST  |clock_BUFGP       |   0.000|
+y<27>       |    7.233(R)|      SLOW  |   -2.774(R)|      FAST  |clock_BUFGP       |   0.000|
+y<28>       |    7.178(R)|      SLOW  |   -2.718(R)|      FAST  |clock_BUFGP       |   0.000|
+y<29>       |    7.447(R)|      SLOW  |   -2.676(R)|      FAST  |clock_BUFGP       |   0.000|
+y<30>       |    6.857(R)|      SLOW  |   -2.809(R)|      FAST  |clock_BUFGP       |   0.000|
+y<31>       |    5.990(R)|      SLOW  |   -2.864(R)|      FAST  |clock_BUFGP       |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clock to Pad
+---------------+-----------------+------------+-----------------+------------+------------------+--------+
+               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+---------------+-----------------+------------+-----------------+------------+------------------+--------+
+final_angle<0> |        11.340(R)|      SLOW  |         6.534(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<1> |        11.289(R)|      SLOW  |         6.506(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<2> |        11.252(R)|      SLOW  |         6.463(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<3> |        11.120(R)|      SLOW  |         6.369(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<4> |        11.150(R)|      SLOW  |         6.455(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<5> |        11.053(R)|      SLOW  |         6.371(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<6> |        11.050(R)|      SLOW  |         6.340(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<7> |        10.923(R)|      SLOW  |         6.261(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<8> |        10.931(R)|      SLOW  |         6.317(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<9> |        10.851(R)|      SLOW  |         6.230(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<10>|        10.816(R)|      SLOW  |         6.205(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<11>|        10.894(R)|      SLOW  |         6.260(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<12>|        10.896(R)|      SLOW  |         6.262(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<13>|        10.659(R)|      SLOW  |         6.120(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<14>|        10.637(R)|      SLOW  |         6.106(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<15>|        10.807(R)|      SLOW  |         6.203(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<16>|        10.794(R)|      SLOW  |         6.201(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<17>|        10.756(R)|      SLOW  |         6.180(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<18>|        10.759(R)|      SLOW  |         6.173(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<19>|        10.737(R)|      SLOW  |         6.167(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<20>|        10.864(R)|      SLOW  |         6.228(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<21>|        10.986(R)|      SLOW  |         6.307(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<22>|        11.030(R)|      SLOW  |         6.336(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<23>|        10.910(R)|      SLOW  |         6.264(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<24>|        10.827(R)|      SLOW  |         6.199(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<25>|        11.124(R)|      SLOW  |         6.368(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<26>|        11.127(R)|      SLOW  |         6.395(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<27>|        11.069(R)|      SLOW  |         6.368(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<28>|        11.282(R)|      SLOW  |         6.468(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<29>|        11.393(R)|      SLOW  |         6.536(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<30>|        11.394(R)|      SLOW  |         6.550(R)|      FAST  |clock_BUFGP       |   0.000|
+final_angle<31>|        11.449(R)|      SLOW  |         6.582(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<0>   |        16.145(R)|      SLOW  |         6.999(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<1>   |        16.935(R)|      SLOW  |         6.656(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<2>   |        17.291(R)|      SLOW  |         6.710(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<3>   |        17.398(R)|      SLOW  |         6.745(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<4>   |        17.999(R)|      SLOW  |         6.517(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<5>   |        18.069(R)|      SLOW  |         6.519(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<6>   |        18.019(R)|      SLOW  |         6.483(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<7>   |        17.905(R)|      SLOW  |         6.411(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<8>   |        17.768(R)|      SLOW  |         6.311(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<9>   |        17.889(R)|      SLOW  |         6.294(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<10>  |        18.118(R)|      SLOW  |         6.447(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<11>  |        17.693(R)|      SLOW  |         6.199(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<12>  |        17.797(R)|      SLOW  |         6.204(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<13>  |        17.718(R)|      SLOW  |         6.125(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<14>  |        17.867(R)|      SLOW  |         6.131(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<15>  |        18.049(R)|      SLOW  |         6.247(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<16>  |        18.093(R)|      SLOW  |         6.270(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<17>  |        18.166(R)|      SLOW  |         6.267(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<18>  |        17.991(R)|      SLOW  |         6.178(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<19>  |        18.153(R)|      SLOW  |         6.275(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<20>  |        18.175(R)|      SLOW  |         6.293(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<21>  |        18.078(R)|      SLOW  |         6.204(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<22>  |        18.047(R)|      SLOW  |         6.109(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<23>  |        17.430(R)|      SLOW  |         5.730(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<24>  |        17.569(R)|      SLOW  |         5.786(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<25>  |        17.332(R)|      SLOW  |         5.560(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<26>  |        17.392(R)|      SLOW  |         5.584(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<27>  |        17.639(R)|      SLOW  |         5.704(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<28>  |        17.618(R)|      SLOW  |         5.663(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<29>  |        17.776(R)|      SLOW  |         5.710(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<30>  |        17.712(R)|      SLOW  |         5.731(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_x<31>  |        17.732(R)|      SLOW  |         5.746(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<0>   |        16.811(R)|      SLOW  |         7.630(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<1>   |        17.224(R)|      SLOW  |         7.200(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<2>   |        18.026(R)|      SLOW  |         7.275(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<3>   |        18.095(R)|      SLOW  |         7.156(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<4>   |        18.173(R)|      SLOW  |         7.209(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<5>   |        17.751(R)|      SLOW  |         6.781(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<6>   |        18.267(R)|      SLOW  |         6.855(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<7>   |        18.382(R)|      SLOW  |         6.858(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<8>   |        18.604(R)|      SLOW  |         6.941(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<9>   |        18.346(R)|      SLOW  |         6.682(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<10>  |        18.669(R)|      SLOW  |         6.791(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<11>  |        21.044(R)|      SLOW  |         8.249(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<12>  |        20.896(R)|      SLOW  |         8.096(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<13>  |        21.156(R)|      SLOW  |         8.165(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<14>  |        21.323(R)|      SLOW  |         8.274(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<15>  |        21.377(R)|      SLOW  |         8.292(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<16>  |        21.234(R)|      SLOW  |         8.138(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<17>  |        21.316(R)|      SLOW  |         8.178(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<18>  |        21.407(R)|      SLOW  |         8.197(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<19>  |        22.989(R)|      SLOW  |         9.206(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<20>  |        22.986(R)|      SLOW  |         9.136(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<21>  |        21.864(R)|      SLOW  |         8.444(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<22>  |        21.937(R)|      SLOW  |         8.534(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<23>  |        21.814(R)|      SLOW  |         8.368(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<24>  |        21.804(R)|      SLOW  |         8.306(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<25>  |        20.928(R)|      SLOW  |         7.744(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<26>  |        20.728(R)|      SLOW  |         7.675(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<27>  |        20.696(R)|      SLOW  |         7.676(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<28>  |        20.626(R)|      SLOW  |         7.610(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<29>  |        21.058(R)|      SLOW  |         7.843(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<30>  |        20.703(R)|      SLOW  |         7.626(R)|      FAST  |clock_BUFGP       |   0.000|
+rotated_y<31>  |        21.925(R)|      SLOW  |         8.303(R)|      FAST  |clock_BUFGP       |   0.000|
+---------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    4.972|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+mode<0>        |rotated_x<0>   |   11.129|
+mode<0>        |rotated_x<1>   |   11.019|
+mode<0>        |rotated_x<2>   |   11.170|
+mode<0>        |rotated_x<3>   |   11.280|
+mode<0>        |rotated_x<4>   |   11.073|
+mode<0>        |rotated_x<5>   |   11.163|
+mode<0>        |rotated_x<6>   |   10.949|
+mode<0>        |rotated_x<7>   |   10.831|
+mode<0>        |rotated_x<8>   |   10.643|
+mode<0>        |rotated_x<9>   |   10.764|
+mode<0>        |rotated_x<10>  |   10.993|
+mode<0>        |rotated_x<11>  |   10.568|
+mode<0>        |rotated_x<12>  |   10.632|
+mode<0>        |rotated_x<13>  |   10.562|
+mode<0>        |rotated_x<14>  |   10.531|
+mode<0>        |rotated_x<15>  |   10.709|
+mode<0>        |rotated_x<16>  |   10.718|
+mode<0>        |rotated_x<17>  |   10.791|
+mode<0>        |rotated_x<18>  |   10.616|
+mode<0>        |rotated_x<19>  |   10.778|
+mode<0>        |rotated_x<20>  |   10.800|
+mode<0>        |rotated_x<21>  |   10.703|
+mode<0>        |rotated_x<22>  |   10.672|
+mode<0>        |rotated_x<23>  |   10.055|
+mode<0>        |rotated_x<24>  |   10.194|
+mode<0>        |rotated_x<25>  |    9.957|
+mode<0>        |rotated_x<26>  |    9.926|
+mode<0>        |rotated_x<27>  |   10.169|
+mode<0>        |rotated_x<28>  |   10.113|
+mode<0>        |rotated_x<29>  |   10.271|
+mode<0>        |rotated_x<30>  |   10.207|
+mode<0>        |rotated_x<31>  |   10.227|
+mode<0>        |rotated_y<0>   |   17.259|
+mode<0>        |rotated_y<1>   |   17.092|
+mode<0>        |rotated_y<2>   |   17.271|
+mode<0>        |rotated_y<3>   |   17.363|
+mode<0>        |rotated_y<4>   |   17.351|
+mode<0>        |rotated_y<5>   |   16.950|
+mode<0>        |rotated_y<6>   |   16.947|
+mode<0>        |rotated_y<7>   |   16.997|
+mode<0>        |rotated_y<8>   |   16.988|
+mode<0>        |rotated_y<9>   |   16.673|
+mode<0>        |rotated_y<10>  |   16.815|
+mode<0>        |rotated_y<11>  |   19.186|
+mode<0>        |rotated_y<12>  |   19.003|
+mode<0>        |rotated_y<13>  |   19.263|
+mode<0>        |rotated_y<14>  |   19.254|
+mode<0>        |rotated_y<15>  |   19.327|
+mode<0>        |rotated_y<16>  |   19.464|
+mode<0>        |rotated_y<17>  |   19.525|
+mode<0>        |rotated_y<18>  |   19.607|
+mode<0>        |rotated_y<19>  |   21.205|
+mode<0>        |rotated_y<20>  |   21.228|
+mode<0>        |rotated_y<21>  |   20.106|
+mode<0>        |rotated_y<22>  |   20.179|
+mode<0>        |rotated_y<23>  |   20.056|
+mode<0>        |rotated_y<24>  |   20.019|
+mode<0>        |rotated_y<25>  |   19.367|
+mode<0>        |rotated_y<26>  |   19.291|
+mode<0>        |rotated_y<27>  |   19.247|
+mode<0>        |rotated_y<28>  |   19.225|
+mode<0>        |rotated_y<29>  |   19.657|
+mode<0>        |rotated_y<30>  |   19.302|
+mode<0>        |rotated_y<31>  |   20.524|
+mode<1>        |rotated_x<0>   |   11.507|
+mode<1>        |rotated_x<1>   |   11.397|
+mode<1>        |rotated_x<2>   |   11.548|
+mode<1>        |rotated_x<3>   |   11.658|
+mode<1>        |rotated_x<4>   |   11.451|
+mode<1>        |rotated_x<5>   |   11.541|
+mode<1>        |rotated_x<6>   |   11.327|
+mode<1>        |rotated_x<7>   |   11.209|
+mode<1>        |rotated_x<8>   |   11.021|
+mode<1>        |rotated_x<9>   |   11.142|
+mode<1>        |rotated_x<10>  |   11.371|
+mode<1>        |rotated_x<11>  |   10.946|
+mode<1>        |rotated_x<12>  |   11.010|
+mode<1>        |rotated_x<13>  |   10.940|
+mode<1>        |rotated_x<14>  |   10.909|
+mode<1>        |rotated_x<15>  |   11.087|
+mode<1>        |rotated_x<16>  |   11.096|
+mode<1>        |rotated_x<17>  |   11.169|
+mode<1>        |rotated_x<18>  |   10.994|
+mode<1>        |rotated_x<19>  |   11.156|
+mode<1>        |rotated_x<20>  |   11.178|
+mode<1>        |rotated_x<21>  |   11.081|
+mode<1>        |rotated_x<22>  |   11.050|
+mode<1>        |rotated_x<23>  |   10.433|
+mode<1>        |rotated_x<24>  |   10.572|
+mode<1>        |rotated_x<25>  |   10.335|
+mode<1>        |rotated_x<26>  |   10.304|
+mode<1>        |rotated_x<27>  |   10.547|
+mode<1>        |rotated_x<28>  |   10.491|
+mode<1>        |rotated_x<29>  |   10.649|
+mode<1>        |rotated_x<30>  |   10.585|
+mode<1>        |rotated_x<31>  |   10.605|
+mode<1>        |rotated_y<0>   |   16.270|
+mode<1>        |rotated_y<1>   |   16.294|
+mode<1>        |rotated_y<2>   |   16.473|
+mode<1>        |rotated_y<3>   |   16.565|
+mode<1>        |rotated_y<4>   |   16.553|
+mode<1>        |rotated_y<5>   |   16.152|
+mode<1>        |rotated_y<6>   |   16.149|
+mode<1>        |rotated_y<7>   |   16.199|
+mode<1>        |rotated_y<8>   |   16.190|
+mode<1>        |rotated_y<9>   |   15.875|
+mode<1>        |rotated_y<10>  |   16.017|
+mode<1>        |rotated_y<11>  |   18.520|
+mode<1>        |rotated_y<12>  |   18.431|
+mode<1>        |rotated_y<13>  |   18.691|
+mode<1>        |rotated_y<14>  |   18.682|
+mode<1>        |rotated_y<15>  |   18.755|
+mode<1>        |rotated_y<16>  |   18.674|
+mode<1>        |rotated_y<17>  |   18.854|
+mode<1>        |rotated_y<18>  |   18.988|
+mode<1>        |rotated_y<19>  |   20.593|
+mode<1>        |rotated_y<20>  |   20.557|
+mode<1>        |rotated_y<21>  |   19.435|
+mode<1>        |rotated_y<22>  |   19.508|
+mode<1>        |rotated_y<23>  |   19.385|
+mode<1>        |rotated_y<24>  |   19.348|
+mode<1>        |rotated_y<25>  |   18.472|
+mode<1>        |rotated_y<26>  |   18.272|
+mode<1>        |rotated_y<27>  |   18.240|
+mode<1>        |rotated_y<28>  |   18.170|
+mode<1>        |rotated_y<29>  |   18.602|
+mode<1>        |rotated_y<30>  |   18.247|
+mode<1>        |rotated_y<31>  |   19.469|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Aug 04 00:26:14 2020 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4815 MB
+
+
+

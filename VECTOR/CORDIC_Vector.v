@@ -16,7 +16,7 @@ wire signed [31:0] y_prime [0:NUMBER_OF_ITERATIONS-1];
 wire signed [31:0] x_start, y_start,angle_start;
 wire signed [31:0] rotated_angles [0:NUMBER_OF_ITERATIONS-1];
 
-Quardrant_Corrector qc(.x(x) , .y(y) , .angle(angle) , .x_out(x_start) , .y_out(y_start) , .angle_out(angle_start));
+Quadrant_Corrector qc(.x(x) , .y(y) , .angle(angle) , .x_out(x_start) , .y_out(y_start) , .angle_out(angle_start));
 
 
 begin

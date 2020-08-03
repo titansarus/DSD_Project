@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">angle</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">y&lt;30:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">angle</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">y&lt;30:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0240</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_angle_out</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cr/iterations[1].zc/angle_out_temp_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">TopModule</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cr/iterations[1].zc/angle_out_temp_13&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cr/iterations[1].zc/angle_out_temp_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">TopModule</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cr/iterations[1].zc/angle_out_temp_18&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cr/iterations[0].zc/angle_out_temp_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">TopModule</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">15 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cr/iterations[0].zc/angle_out_temp_25&gt; &lt;cr/iterations[0].zc/angle_out_temp_22&gt; &lt;cr/iterations[0].zc/angle_out_temp_19&gt; &lt;cr/iterations[0].zc/angle_out_temp_18&gt; &lt;cr/iterations[0].zc/angle_out_temp_17&gt; &lt;cr/iterations[0].zc/angle_out_temp_16&gt; &lt;cr/iterations[0].zc/angle_out_temp_15&gt; &lt;cr/iterations[0].zc/angle_out_temp_13&gt; &lt;cr/iterations[0].zc/angle_out_temp_11&gt; &lt;cr/iterations[0].zc/angle_out_temp_8&gt; &lt;cr/iterations[0].zc/angle_out_temp_7&gt; &lt;cr/iterations[0].zc/angle_out_temp_6&gt; &lt;cr/iterations[0].zc/angle_out_temp_5&gt; &lt;cr/iterations[0].zc/angle_out_temp_3&gt; &lt;cr/iterations[0].zc/angle_out_temp_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cr/iterations[0].zc/angle_out_temp_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">TopModule</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">10 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cr/iterations[0].zc/angle_out_temp_24&gt; &lt;cr/iterations[0].zc/angle_out_temp_23&gt; &lt;cr/iterations[0].zc/angle_out_temp_21&gt; &lt;cr/iterations[0].zc/angle_out_temp_20&gt; &lt;cr/iterations[0].zc/angle_out_temp_14&gt; &lt;cr/iterations[0].zc/angle_out_temp_12&gt; &lt;cr/iterations[0].zc/angle_out_temp_10&gt; &lt;cr/iterations[0].zc/angle_out_temp_9&gt; &lt;cr/iterations[0].zc/angle_out_temp_4&gt; &lt;cr/iterations[0].zc/angle_out_temp_2&gt; </arg>
+</msg>
+
+</messages>

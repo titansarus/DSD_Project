@@ -1,0 +1,7 @@
+verilog work "Z_Calculator.v"
+verilog work "Y_Calculator.v"
+verilog work "X_Calculator.v"
+verilog work "Scaler.v"
+verilog work "Quadrant_Corrector.v"
+verilog work "CORDIC_Rotation.v"
+verilog work "TopModule.v"

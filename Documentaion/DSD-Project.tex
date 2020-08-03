@@ -640,7 +640,9 @@ input clock,
 \hrulefill
 
 
- ماژول اصلی  \lr{CORDIC\_Vector.v} 
+ ماژول اصلی  \lr{CORDIC\_Vector} 
+
+ورودی های آن:
 
 \begin{latin}
 \begin{verbatim}
@@ -668,6 +670,40 @@ input [1:0] mode
 \begin{verbatim}
 parameter NUMBER_OF_ITERATIONS = 17;
 \end{verbatim}
+\end{latin}
+
+
+\hrulefill
+
+ماژول \lr{TopModule}
+
+ورودی های آن:
+
+\begin{latin}
+
+\begin{verbatim}
+input signed [31:0] x,
+input signed [31:0] y,
+input signed [31:0] angle,
+input [1:0] mode,
+   
+\end{verbatim}
+
+\end{latin}
+
+
+و خروجی های آن:
+
+
+\begin{latin}
+
+\begin{verbatim}
+output wire signed [31:0] rotated_x,
+output wire signed [31:0] rotated_y,
+output wire signed [31:0] final_angle
+   
+\end{verbatim}
+
 \end{latin}
 
 
@@ -833,6 +869,37 @@ parameter NUMBER_OF_ITERATIONS = 29;
 \end{latin}
 
 
+\hrulefill
+
+ماژول \lr{TopModule}
+
+ورودی های آن:
+
+\begin{latin}
+
+\begin{verbatim}
+input signed [31:0] x,
+input signed [31:0] y,
+input signed [31:0] angle,
+input [1:0] mode,
+   
+\end{verbatim}
+
+\end{latin}
+
+
+و خروجی های آن:
+
+
+\begin{latin}
+
+\begin{verbatim}
+output wire signed [31:0] rotated_x,
+output wire signed [31:0] rotated_y,
+output wire signed [31:0] final_angle
+   
+\end{verbatim}
+\end{latin}
 
 \newpage
 
@@ -840,6 +907,28 @@ parameter NUMBER_OF_ITERATIONS = 29;
 
 
 دیاگرام های بلوکی از صفحه بعد قرار گرفته اند. به ترتیب ابتدا دیاگرام های بلوکی مربوط به Vectoring و سپس Rotation قرار گرفته اند. در صفحه اول هر کدام، ماژول ها و ورودی-خروجی هایشان قرار گرفته و صفحه بعدی، اتصالات درونی آن ها.
+
+برای نمایش اتصالات درونی و از آن جایی که شکل سنتز شده کامل که شامل تعداد Iteration های زیاد باشد، بسیار بزرگ شده و در صفحه امکان نمایش درست آن وجود ندارد، یک شکل با Iteration های کم که اتصالات دقیق معلوم هستتند و یک شکل از دور برای حالتی که تمامی Iteration ها باشند، قرار گرفته است.
+
+دیاگرام های کلی قرار گرفته به ترتیب زیر هستند:
+
+
+\begin{itemize}
+
+\item
+حالت Rotation با تعداد Iteration کامل
+
+\item
+حالت Rotation با تعداد Iteration کم
+
+\item
+حالت Vectoring با تعداد Iteration کامل
+
+\item
+حالت Vectoring با تعداد Iteration کم
+
+
+\end{itemize}
 
 \newpage
 
@@ -858,12 +947,37 @@ parameter NUMBER_OF_ITERATIONS = 29;
 \begin{landscape}
 
 \thispagestyle{empty}
-
 \includepdf[pages=1,angle=90, ]{CORDICROTATION.pdf}
-
 
 \end{landscape}
 \newpage
+
+
+
+\begin{landscape}
+\thispagestyle{empty}
+
+\includepdf[pages=1,angle=90, ]{BigPicture_Rotation.pdf}
+\end{landscape}
+
+\begin{landscape}
+\thispagestyle{empty}
+
+\includepdf[pages=1,angle=90, ]{CORDIC_SMALL.pdf}
+\end{landscape}
+
+\begin{landscape}
+\thispagestyle{empty}
+
+\includepdf[pages=1,angle=90, ]{BigPicture_Vector.pdf}
+\end{landscape}
+
+\begin{landscape}
+\thispagestyle{empty}
+
+\includepdf[pages=1,angle=90, ]{CORDIC_VECTOR_SMALL.pdf}
+\end{landscape}
+
 
 \subsection{شرح وظایف ماژول ها}
 
@@ -1123,6 +1237,42 @@ $NUMBER\_OF\_ITERATIONS - 1$
 در انتهای این کد، یک تابع به نام Lookup وجود دارد که Index و mode را ورودی گرفته و براساس آن، مقدار متناسب را از بین جدول $\arctan$ یا $\arctanh$ یا $2^{-i}$ خروجی می دهد. دلیل این که از از تابع استفاده کردیم، این است که در اصل مقادیر این تابع، به عنوان یکسری ثابت که از طریق Mux انتخاب می شوند، در حین Instantiate شدن ماژول های درون Generate به آن ها داده می شوند و نیازی نیست که از یک ROM جداگانه استفاده کنیم. زیرا در صورت استفاده از ROM باید امکان خوانده شدن همزمان حدود 32 مقدار مختلف را در بدترین حالت برای آن فراهم می کردیم تا همه مراحل سیستم بتوانند به صورت Pipeline و مستقل از هم کار بکنند که هزینه اجرایی بالایی داشت و از این رو آن را به صورت تابع پیاده سازی کردیم.
 
 
+\hrulefill
+
+\newpage
+در نهایت یک \lr{Top Module} با نام \lr{TopModule} داریم که ورودی های آن به صورت زیر است:
+
+\begin{latin}
+
+\begin{verbatim}
+input signed [31:0] x,
+input signed [31:0] y,
+input signed [31:0] angle,
+input [1:0] mode,
+   
+\end{verbatim}
+
+\end{latin}
+
+
+و خروجی های آن:
+
+
+\begin{latin}
+
+\begin{verbatim}
+output wire signed [31:0] rotated_x,
+output wire signed [31:0] rotated_y,
+output wire signed [31:0] final_angle
+   
+\end{verbatim}
+
+\end{latin}
+
+در این ماژول فقط یک Instance از CORDIC\_Vector با اندازه پارامتر مشخص ساخته شده که در سنتز و تست بنچ مورد استفاده قرار بگیرد.
+
+
+\newpage
 \subsubsection{ROTATION}
 بخش زیادی از ماژول های استفاده شده در این بخش، مشابه بخش قبل است اما برای کامل بودن گزارش، توضیحات آن ها مجددا مانند بخش قبل آورده شده است.
 
@@ -1165,7 +1315,7 @@ output reg [31:0] angle_out
 \end{latin}
 
 وظیفه این ماژول این است که اگر زاویه داده شده در بازه
- $\frac{-\pi}{2} < angle < \frac{pi}{2}$
+ $\frac{-\pi}{2} < angle < \frac{\pi}{2}$
  یا به بیان دیگر،
  $270 < angle \leq 360$
  یا
@@ -1346,6 +1496,161 @@ $NUMBER\_OF\_ITERATIONS - 1$
 در نهایت این خروجی ها به عنوان خروجی اصلی برنامه داده شده اند.
 
 در انتهای این کد، یک تابع به نام Lookup وجود دارد که Index و mode را ورودی گرفته و براساس آن، مقدار متناسب را از بین جدول $\arctan$ یا $\arctanh$ یا $2^{-i}$ خروجی می دهد. دلیل این که از از تابع استفاده کردیم، این است که در اصل مقادیر این تابع، به عنوان یکسری ثابت که از طریق Mux انتخاب می شوند، در حین Instantiate شدن ماژول های درون Generate به آن ها داده می شوند و نیازی نیست که از یک ROM جداگانه استفاده کنیم. زیرا در صورت استفاده از ROM باید امکان خوانده شدن همزمان حدود 32 مقدار مختلف را در بدترین حالت برای آن فراهم می کردیم تا همه مراحل سیستم بتوانند به صورت Pipeline و مستقل از هم کار بکنند که هزینه اجرایی بالایی داشت و از این رو آن را به صورت تابع پیاده سازی کردیم.
+
+
+\hrulefill
+
+در نهایت یک \lr{Top Module} با نام \lr{TopModule} داریم که ورودی های آن به صورت زیر است:
+
+\begin{latin}
+
+\begin{verbatim}
+input signed [31:0] x,
+input signed [31:0] y,
+input signed [31:0] angle,
+input [1:0] mode,
+   
+\end{verbatim}
+
+\end{latin}
+
+
+و خروجی های آن:
+
+
+\begin{latin}
+
+\begin{verbatim}
+output wire signed [31:0] rotated_x,
+output wire signed [31:0] rotated_y,
+output wire signed [31:0] final_angle
+   
+\end{verbatim}
+
+\end{latin}
+
+در این ماژول فقط یک Instance از CORDIC\_Rotation با اندازه پارامتر مشخص ساخته شده که در سنتز و تست بنچ مورد استفاده قرار بگیرد.
+
+
+\newpage
+
+
+\section{سنتز}
+
+برای سنتز، از نرم افزار \lr{Xilinx ISE} استفاده کردیم و در تنظیمات برنامه، سنتز را روی FPGA با مشخصات: \lr{Spartan6 XC6SLX150T} و پکیج \lr{FGG484} انجام دادیم. سنتز پروژه اول و دوم به صورت جداگانه انجام گرفت. برای سنتز در هر پروژه، ماژول \lr{TopModule} به عنوان \lr{Top Module} انتخاب شده است.
+
+\subsection{سنتز \lr{Rotation}}
+
+نتایج اصلی سنتز به صورت زیر است. فایل های مربوطه نیز به طور کامل ضمیمه گزارش کار شده است:
+
+نتایج اصلی تاخیرها و زمان های مربوط به کلاک:
+
+\begin{latin}
+\begin{verbatim}
+
+   Minimum period: 3.960ns (Maximum Frequency: 252.534MHz)
+   Minimum input arrival time before clock: 6.375ns
+   Maximum output required time after clock: 11.079ns
+   Maximum combinational path delay: 9.252ns
+
+
+\end{verbatim}
+\end{latin}
+
+
+نتایج اصلی مربوط به FlipFlop ها و LUT ها و میزان استفاده از Slice های FPGA و به طور کلی، Utilization و مساحت مورد استفاده:
+
+\begin{latin}
+\begin{verbatim}
+
+Slice Logic Utilization:
+  Number of Slice Registers:                 2,926 out of 184,304    1%
+    Number used as Flip Flops:               2,700
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:              226
+  Number of Slice LUTs:                      5,205 out of  92,152    5%
+    Number used as logic:                    5,198 out of  92,152    5%
+      Number using O6 output only:           4,868
+      Number using O5 output only:              94
+      Number using O5 and O6:                  236
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of  21,680    0%
+    Number used exclusively as route-thrus:      7
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         7
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,369 out of  23,038    5%
+  Number of MUXCYs used:                     4,160 out of  46,076    9%
+  Number of LUT Flip Flop pairs used:        5,214
+    Number with an unused Flip Flop:         2,289 out of   5,214   43%
+    Number with an unused LUT:                   9 out of   5,214    1%
+    Number of fully used LUT-FF pairs:       2,916 out of   5,214   55%
+    Number of unique control sets:               2
+    Number of slice register sites lost
+      to control set restrictions:               4 out of 184,304    1%
+
+\end{verbatim}
+\end{latin}
+
+\subsection{سنتز \lr{Vectoring}}
+
+نتایج اصلی سنتز به صورت زیر است. فایل های مربوطه نیز به طور کامل ضمیمه گزارش کار شده است:
+
+نتایج اصلی تاخیرها و زمان های مربوط به کلاک:
+
+\begin{latin}
+\begin{verbatim}
+
+   Minimum period: 4.003ns (Maximum Frequency: 249.799MHz)
+   Minimum input arrival time before clock: 7.763ns
+   Maximum output required time after clock: 10.936ns
+   Maximum combinational path delay: 9.147ns
+
+
+\end{verbatim}
+\end{latin}
+
+
+نتایج اصلی مربوط به FlipFlop ها و LUT ها و میزان استفاده از Slice های FPGA و به طور کلی، Utilization و مساحت مورد استفاده:
+
+\begin{latin}
+\begin{verbatim}
+
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,752 out of 184,304    1%
+    Number used as Flip Flops:               1,526
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:              226
+  Number of Slice LUTs:                      3,271 out of  92,152    3%
+    Number used as logic:                    3,265 out of  92,152    3%
+      Number using O6 output only:           2,903
+      Number using O5 output only:              94
+      Number using O5 and O6:                  268
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of  21,680    0%
+    Number used exclusively as route-thrus:      6
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         6
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   866 out of  23,038    3%
+  Number of MUXCYs used:                     2,624 out of  46,076    5%
+  Number of LUT Flip Flop pairs used:        3,276
+    Number with an unused Flip Flop:         1,524 out of   3,276   46%
+    Number with an unused LUT:                   5 out of   3,276    1%
+    Number of fully used LUT-FF pairs:       1,747 out of   3,276   53%
+    Number of unique control sets:               2
+    Number of slice register sites lost
+      to control set restrictions:               2 out of 184,304    1%
+
+
+\end{verbatim}
+\end{latin}
 
 
 

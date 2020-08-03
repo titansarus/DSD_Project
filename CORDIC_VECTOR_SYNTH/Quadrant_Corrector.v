@@ -1,0 +1,59 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    00:31:54 08/04/2020 
+// Design Name: 
+// Module Name:    Quadrant_Corrector 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+`include "CONSTANTS.v"
+
+module Quadrant_Corrector(
+    input [31:0] x,
+    input [31:0] y,
+    input[31:0] angle,
+    output reg [31:0] x_out,
+    output reg [31:0] y_out,
+    output reg [31:0] angle_out
+);
+
+always @(*)
+begin
+    case({x[31] , y[31]})
+        2'b00,2'b01:
+            begin		// -90 to 90
+            x_out <= x;
+            y_out <= y;
+            angle_out <= 32'b00000000000000000000000000000000;
+            end
+        2'b10:				// subtract 90	(second quadrant)
+            begin
+            x_out <= -y;
+            y_out <= x;
+            angle_out <= 32'b00100000000000000000000000000000;
+            end
+        2'b11:				// add 90 (third quadrant)
+            begin
+            x_out <= y;			
+            y_out <= -x;
+            angle_out <= 32'b01000000000000000000000000000000;
+            end
+    endcase
+end
+
+
+
+endmodule
+

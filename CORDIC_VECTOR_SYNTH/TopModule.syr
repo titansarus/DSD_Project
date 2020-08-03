@@ -1,0 +1,711 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: TopModule.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TopModule.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TopModule"
+Output Format                      : NGC
+Target Device                      : xc6slx150t-3-fgg484
+
+---- Source Options
+Top Module Name                    : TopModule
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\titansarus\Documents\ISE\CORDIC_VECTOR_SYNTH\Z_Calculator.v" into library work
+Parsing verilog file "CONSTANTS.v" included at line 21.
+Parsing module <Z_Calculator>.
+Analyzing Verilog file "C:\Users\titansarus\Documents\ISE\CORDIC_VECTOR_SYNTH\Y_Calculator.v" into library work
+Parsing verilog file "CONSTANTS.v" included at line 21.
+Parsing module <Y_Calculator>.
+Analyzing Verilog file "C:\Users\titansarus\Documents\ISE\CORDIC_VECTOR_SYNTH\X_Calculator.v" into library work
+Parsing verilog file "CONSTANTS.v" included at line 21.
+Parsing module <X_Calculator>.
+Analyzing Verilog file "C:\Users\titansarus\Documents\ISE\CORDIC_VECTOR_SYNTH\Scaler.v" into library work
+Parsing verilog file "CONSTANTS.v" included at line 21.
+Parsing module <Scaler>.
+Analyzing Verilog file "C:\Users\titansarus\Documents\ISE\CORDIC_VECTOR_SYNTH\Quadrant_Corrector.v" into library work
+Parsing verilog file "CONSTANTS.v" included at line 21.
+Parsing module <Quadrant_Corrector>.
+Analyzing Verilog file "C:\Users\titansarus\Documents\ISE\CORDIC_VECTOR_SYNTH\CORDIC_Vector.v" into library work
+Parsing verilog file "CONSTANTS.v" included at line 22.
+Parsing module <CORDIC_Vector>.
+Analyzing Verilog file "C:\Users\titansarus\Documents\ISE\CORDIC_VECTOR_SYNTH\TopModule.v" into library work
+Parsing verilog file "CONSTANTS.v" included at line 21.
+Parsing module <TopModule>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <TopModule>.
+
+Elaborating module <CORDIC_Vector(NUMBER_OF_ITERATIONS=17)>.
+
+Elaborating module <Quadrant_Corrector>.
+
+Elaborating module <X_Calculator>.
+
+Elaborating module <Y_Calculator>.
+
+Elaborating module <Z_Calculator>.
+
+Elaborating module <Scaler>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TopModule>.
+    Related source file is "C:\Users\titansarus\Documents\ISE\CORDIC_VECTOR_SYNTH\TopModule.v".
+    Summary:
+	no macro.
+Unit <TopModule> synthesized.
+
+Synthesizing Unit <CORDIC_Vector>.
+    Related source file is "C:\Users\titansarus\Documents\ISE\CORDIC_VECTOR_SYNTH\CORDIC_Vector.v".
+        NUMBER_OF_ITERATIONS = 17
+    Found 4x416-bit Read Only RAM for signal <_n0240>
+    Summary:
+	inferred   1 RAM(s).
+Unit <CORDIC_Vector> synthesized.
+
+Synthesizing Unit <Quadrant_Corrector>.
+    Related source file is "C:\Users\titansarus\Documents\ISE\CORDIC_VECTOR_SYNTH\Quadrant_Corrector.v".
+WARNING:Xst:647 - Input <angle> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit subtractor for signal <y[31]_unary_minus_1_OUT> created at line 43.
+    Found 32-bit subtractor for signal <x[31]_unary_minus_2_OUT> created at line 50.
+    Found 4x32-bit Read Only RAM for signal <angle_out>
+    Found 32-bit 3-to-1 multiplexer for signal <x_out> created at line 34.
+    Found 32-bit 3-to-1 multiplexer for signal <y_out> created at line 34.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Multiplexer(s).
+Unit <Quadrant_Corrector> synthesized.
+
+Synthesizing Unit <X_Calculator>.
+    Related source file is "C:\Users\titansarus\Documents\ISE\CORDIC_VECTOR_SYNTH\X_Calculator.v".
+WARNING:Xst:647 - Input <y<30:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <angle> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit register for signal <x_out_temp>.
+    Found 32-bit subtractor for signal <x[31]_y_shift[31]_sub_6_OUT> created at line 44.
+    Found 32-bit adder for signal <x[31]_y_shift[31]_add_4_OUT> created at line 44.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <X_Calculator> synthesized.
+
+Synthesizing Unit <Y_Calculator>.
+    Related source file is "C:\Users\titansarus\Documents\ISE\CORDIC_VECTOR_SYNTH\Y_Calculator.v".
+    Found 32-bit register for signal <y_out_temp>.
+    Found 32-bit subtractor for signal <y[31]_x_shift[31]_sub_3_OUT> created at line 34.
+    Found 32-bit adder for signal <y[31]_x_shift[31]_add_1_OUT> created at line 34.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+Unit <Y_Calculator> synthesized.
+
+Synthesizing Unit <Z_Calculator>.
+    Related source file is "C:\Users\titansarus\Documents\ISE\CORDIC_VECTOR_SYNTH\Z_Calculator.v".
+WARNING:Xst:647 - Input <y<30:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit register for signal <angle_out_temp>.
+    Found 32-bit subtractor for signal <angle[31]_lookup_table_amount[31]_sub_2_OUT> created at line 33.
+    Found 32-bit adder for signal <angle[31]_lookup_table_amount[31]_add_2_OUT> created at line 33.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+Unit <Z_Calculator> synthesized.
+
+Synthesizing Unit <Scaler>.
+    Related source file is "C:\Users\titansarus\Documents\ISE\CORDIC_VECTOR_SYNTH\Scaler.v".
+    Found 30-bit adder for signal <n0061[29:0]> created at line 28.
+    Found 27-bit adder for signal <n0064[26:0]> created at line 29.
+    Found 31-bit adder for signal <n0067[30:0]> created at line 28.
+    Found 32-bit adder for signal <n0080> created at line 28.
+    Found 21-bit adder for signal <n0073[20:0]> created at line 29.
+    Found 19-bit adder for signal <n0076[18:0]> created at line 29.
+    Found 22-bit adder for signal <n0079[21:0]> created at line 29.
+    Found 32-bit adder for signal <hyperbolic_answer> created at line 28.
+    Found 29-bit adder for signal <n0085[28:0]> created at line 30.
+    Found 26-bit adder for signal <n0088[25:0]> created at line 31.
+    Found 30-bit adder for signal <n0091[29:0]> created at line 30.
+    Found 23-bit adder for signal <n0094[22:0]> created at line 31.
+    Found 24-bit adder for signal <n0097[23:0]> created at line 31.
+    Found 31-bit adder for signal <n0100[30:0]> created at line 30.
+    Found 32-bit adder for signal <n0058> created at line 30.
+    Found 32-bit 4-to-1 multiplexer for signal <answer> created at line 23.
+    Summary:
+	inferred  14 Adder/Subtractor(s).
+	inferred   6 Multiplexer(s).
+Unit <Scaler> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 4x32-bit single-port Read Only RAM                    : 1
+ 4x416-bit single-port Read Only RAM                   : 1
+# Adders/Subtractors                                   : 94
+ 19-bit adder                                          : 2
+ 21-bit adder                                          : 2
+ 22-bit adder                                          : 2
+ 23-bit adder                                          : 2
+ 24-bit adder                                          : 2
+ 26-bit adder                                          : 2
+ 27-bit adder                                          : 2
+ 29-bit adder                                          : 2
+ 30-bit adder                                          : 4
+ 31-bit adder                                          : 4
+ 32-bit adder                                          : 20
+ 32-bit addsub                                         : 32
+ 32-bit subtractor                                     : 18
+# Registers                                            : 48
+ 32-bit register                                       : 48
+# Multiplexers                                         : 78
+ 32-bit 2-to-1 multiplexer                             : 76
+ 32-bit 3-to-1 multiplexer                             : 2
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <CORDIC_Vector>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0240> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 416-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <mode>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <CORDIC_Vector> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Quadrant_Corrector>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_angle_out> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 32-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(x<31>,y<31>)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <angle_out>     |          |
+    -----------------------------------------------------------------------
+Unit <Quadrant_Corrector> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Scaler>.
+	The following adders/subtractors are grouped into adder tree <Madd_n00801> :
+ 	<Madd_n0080> in block <Scaler>, 	<Madd_n0061[29:0]> in block <Scaler>, 	<Madd_n0064[26:0]> in block <Scaler>.
+	The following adders/subtractors are grouped into adder tree <Madd_n0100[30:0]1> :
+ 	<Madd_n0085[28:0]> in block <Scaler>, 	<Madd_n0088[25:0]> in block <Scaler>, 	<Madd_n0094[22:0]> in block <Scaler>, 	<Madd_n0097[23:0]> in block <Scaler>.
+Unit <Scaler> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 4x32-bit single-port distributed Read Only RAM        : 1
+ 4x416-bit single-port distributed Read Only RAM       : 1
+# Adders/Subtractors                                   : 74
+ 19-bit adder                                          : 2
+ 21-bit adder                                          : 2
+ 22-bit adder                                          : 2
+ 32-bit adder                                          : 18
+ 32-bit addsub                                         : 32
+ 32-bit subtractor                                     : 18
+# Adder Trees                                          : 4
+ 31-bit / 7-inputs adder tree                          : 2
+ 32-bit / 5-inputs adder tree                          : 2
+# Registers                                            : 1536
+ Flip-Flops                                            : 1536
+# Multiplexers                                         : 78
+ 32-bit 2-to-1 multiplexer                             : 76
+ 32-bit 3-to-1 multiplexer                             : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <TopModule> ...
+
+Optimizing unit <CORDIC_Vector> ...
+
+Optimizing unit <X_Calculator> ...
+
+Optimizing unit <Scaler> ...
+INFO:Xst:2261 - The FF/Latch <cr/iterations[1].zc/angle_out_temp_15> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <cr/iterations[1].zc/angle_out_temp_13> 
+INFO:Xst:2261 - The FF/Latch <cr/iterations[1].zc/angle_out_temp_19> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <cr/iterations[1].zc/angle_out_temp_18> 
+INFO:Xst:2261 - The FF/Latch <cr/iterations[0].zc/angle_out_temp_26> in Unit <TopModule> is equivalent to the following 15 FFs/Latches, which will be removed : <cr/iterations[0].zc/angle_out_temp_25> <cr/iterations[0].zc/angle_out_temp_22> <cr/iterations[0].zc/angle_out_temp_19> <cr/iterations[0].zc/angle_out_temp_18> <cr/iterations[0].zc/angle_out_temp_17> <cr/iterations[0].zc/angle_out_temp_16> <cr/iterations[0].zc/angle_out_temp_15> <cr/iterations[0].zc/angle_out_temp_13> <cr/iterations[0].zc/angle_out_temp_11> <cr/iterations[0].zc/angle_out_temp_8> <cr/iterations[0].zc/angle_out_temp_7> <cr/iterations[0].zc/angle_out_temp_6> <cr/iterations[0].zc/angle_out_temp_5> <cr/iterations[0].zc/angle_out_temp_3> <cr/iterations[0].zc/angle_out_temp_1> 
+INFO:Xst:2261 - The FF/Latch <cr/iterations[0].zc/angle_out_temp_27> in Unit <TopModule> is equivalent to the following 10 FFs/Latches, which will be removed : <cr/iterations[0].zc/angle_out_temp_24> <cr/iterations[0].zc/angle_out_temp_23> <cr/iterations[0].zc/angle_out_temp_21> <cr/iterations[0].zc/angle_out_temp_20> <cr/iterations[0].zc/angle_out_temp_14> <cr/iterations[0].zc/angle_out_temp_12> <cr/iterations[0].zc/angle_out_temp_10> <cr/iterations[0].zc/angle_out_temp_9> <cr/iterations[0].zc/angle_out_temp_4> <cr/iterations[0].zc/angle_out_temp_2> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+PACKER Warning: Lut cr/y_start<31>11 is driving XOR and other loads hence can not be packed with the XOR/Carry. This would result in an extra LUT for a feedthrough.
+Found area constraint ratio of 100 (+ 5) on block TopModule, actual ratio is 4.
+FlipFlop cr/iterations[0].yc/y_out_temp_31 has been replicated 1 time(s)
+FlipFlop cr/iterations[10].yc/y_out_temp_31 has been replicated 2 time(s)
+FlipFlop cr/iterations[11].yc/y_out_temp_31 has been replicated 2 time(s)
+FlipFlop cr/iterations[12].yc/y_out_temp_31 has been replicated 2 time(s)
+FlipFlop cr/iterations[13].yc/y_out_temp_31 has been replicated 2 time(s)
+FlipFlop cr/iterations[14].yc/y_out_temp_31 has been replicated 2 time(s)
+FlipFlop cr/iterations[1].yc/y_out_temp_31 has been replicated 1 time(s)
+FlipFlop cr/iterations[5].yc/y_out_temp_31 has been replicated 1 time(s)
+FlipFlop cr/iterations[6].yc/y_out_temp_31 has been replicated 1 time(s)
+FlipFlop cr/iterations[7].yc/y_out_temp_31 has been replicated 1 time(s)
+FlipFlop cr/iterations[8].yc/y_out_temp_31 has been replicated 1 time(s)
+FlipFlop cr/iterations[9].yc/y_out_temp_31 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1526
+ Flip-Flops                                            : 1526
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TopModule.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 8601
+#      GND                         : 1
+#      INV                         : 94
+#      LUT1                        : 34
+#      LUT2                        : 1372
+#      LUT3                        : 761
+#      LUT4                        : 423
+#      LUT5                        : 218
+#      LUT6                        : 592
+#      MUXCY                       : 2526
+#      VCC                         : 1
+#      XORCY                       : 2579
+# FlipFlops/Latches                : 1526
+#      FD                          : 1014
+#      FDE                         : 512
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 162
+#      IBUF                        : 66
+#      OBUF                        : 96
+PACKER Warning: Lut cr/y_start<31>11 is driving XOR and other loads hence can not be packed with the XOR/Carry. This would result in an extra LUT for a feedthrough.
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx150tfgg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1526  out of  184304     0%  
+ Number of Slice LUTs:                 3494  out of  92152     3%  
+    Number used as Logic:              3494  out of  92152     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   3537
+   Number with an unused Flip Flop:    2011  out of   3537    56%  
+   Number with an unused LUT:            43  out of   3537     1%  
+   Number of fully used LUT-FF pairs:  1483  out of   3537    41%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                         195
+ Number of bonded IOBs:                 163  out of    296    55%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 1526  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.003ns (Maximum Frequency: 249.799MHz)
+   Minimum input arrival time before clock: 7.763ns
+   Maximum output required time after clock: 10.936ns
+   Maximum combinational path delay: 9.147ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 4.003ns (frequency: 249.799MHz)
+  Total number of paths / destination ports: 104847 / 1454
+-------------------------------------------------------------------------
+Delay:               4.003ns (Levels of Logic = 33)
+  Source:            cr/iterations[4].yc/y_out_temp_31 (FF)
+  Destination:       cr/iterations[5].yc/y_out_temp_31 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: cr/iterations[4].yc/y_out_temp_31 to cr/iterations[5].yc/y_out_temp_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q             109   0.447   1.900  cr/iterations[4].yc/y_out_temp_31 (cr/iterations[4].yc/y_out_temp_31)
+     INV:I->O              1   0.206   0.579  cr/y_prime<5><31>_inv2_INV_0 (cr/y_prime<5><31>_inv)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<0> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<1> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<2> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<3> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<4> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<5> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<6> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<7> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<8> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<9> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<10> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<11> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<12> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<13> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<14> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<15> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<16> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<17> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<18> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<19> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<20> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<21> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<22> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<23> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<24> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<25> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<26> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<27> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<28> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<29> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<30> (cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_cy<30>)
+     XORCY:CI->O           2   0.180   0.000  cr/iterations[5].yc/Maddsub_y[31]_y[31]_mux_3_OUT_xor<31> (cr/iterations[5].yc/y[31]_y[31]_mux_3_OUT<31>)
+     FD:D                      0.102          cr/iterations[5].yc/y_out_temp_31
+    ----------------------------------------
+    Total                      4.003ns (1.524ns logic, 2.479ns route)
+                                       (38.1% logic, 61.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 107469 / 1539
+-------------------------------------------------------------------------
+Offset:              7.763ns (Levels of Logic = 36)
+  Source:            x<31> (PAD)
+  Destination:       cr/iterations[0].zc/angle_out_temp_31 (FF)
+  Destination Clock: clock rising
+
+  Data Path: x<31> to cr/iterations[0].zc/angle_out_temp_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           195   1.222   2.048  x_31_IBUF (x_31_IBUF)
+     INV:I->O              0   0.206   0.000  cr/qc/Msub_x[31]_unary_minus_2_OUT_lut<31>_INV_0 (cr/qc/Msub_x[31]_unary_minus_2_OUT_lut<31>)
+     XORCY:LI->O          66   0.136   1.758  cr/qc/Msub_x[31]_unary_minus_2_OUT_xor<31> (cr/qc/x[31]_unary_minus_2_OUT<31>)
+     LUT3:I1->O           34   0.203   1.320  cr/y_start<31>11 (cr/y_start<31>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<0> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<1> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<2> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<3> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<4> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<5> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<6> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<7> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<8> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<9> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<10> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<11> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<12> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<13> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<14> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<15> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<16> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<17> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<18> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<19> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<20> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<21> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<22> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<23> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<24> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<25> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<26> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<27> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<28> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<29> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<30> (cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_cy<30>)
+     XORCY:CI->O           1   0.180   0.000  cr/iterations[0].zc/Maddsub_angle[31]_angle[31]_mux_3_OUT_xor<31> (cr/iterations[0].zc/angle[31]_angle[31]_mux_3_OUT<31>)
+     FD:D                      0.102          cr/iterations[0].zc/angle_out_temp_31
+    ----------------------------------------
+    Total                      7.763ns (2.638ns logic, 5.125ns route)
+                                       (34.0% logic, 66.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 20430914 / 96
+-------------------------------------------------------------------------
+Offset:              10.936ns (Levels of Logic = 24)
+  Source:            cr/iterations[15].xc/x_out_temp_15 (FF)
+  Destination:       rotated_x<31> (PAD)
+  Source Clock:      clock rising
+
+  Data Path: cr/iterations[15].xc/x_out_temp_15 to rotated_x<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             28   0.447   1.463  cr/iterations[15].xc/x_out_temp_15 (cr/iterations[15].xc/x_out_temp_15)
+     LUT3:I0->O            1   0.205   0.580  cr/scaler/ADDERTREE_INTERNAL_Madd115 (cr/scaler/ADDERTREE_INTERNAL_Madd115)
+     LUT4:I3->O            1   0.205   0.000  cr/scaler/ADDERTREE_INTERNAL_Madd1_lut<0>16 (cr/scaler/ADDERTREE_INTERNAL_Madd1_lut<0>16)
+     MUXCY:S->O            1   0.172   0.000  cr/scaler/ADDERTREE_INTERNAL_Madd1_cy<0>_15 (cr/scaler/ADDERTREE_INTERNAL_Madd1_cy<0>16)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler/ADDERTREE_INTERNAL_Madd1_cy<0>_16 (cr/scaler/ADDERTREE_INTERNAL_Madd1_cy<0>17)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler/ADDERTREE_INTERNAL_Madd1_cy<0>_17 (cr/scaler/ADDERTREE_INTERNAL_Madd1_cy<0>18)
+     XORCY:CI->O           2   0.180   0.617  cr/scaler/ADDERTREE_INTERNAL_Madd1_xor<0>_18 (cr/scaler/ADDERTREE_INTERNAL_Madd_191)
+     LUT3:I2->O            1   0.205   0.580  cr/scaler/ADDERTREE_INTERNAL_Madd319 (cr/scaler/ADDERTREE_INTERNAL_Madd319)
+     LUT4:I3->O            1   0.205   0.000  cr/scaler/ADDERTREE_INTERNAL_Madd3_lut<0>20 (cr/scaler/ADDERTREE_INTERNAL_Madd3_lut<0>20)
+     MUXCY:S->O            1   0.172   0.000  cr/scaler/ADDERTREE_INTERNAL_Madd3_cy<0>_19 (cr/scaler/ADDERTREE_INTERNAL_Madd3_cy<0>20)
+     XORCY:CI->O           1   0.180   0.684  cr/scaler/ADDERTREE_INTERNAL_Madd3_xor<0>_20 (cr/scaler/ADDERTREE_INTERNAL_Madd_215)
+     LUT5:I3->O            1   0.203   0.924  cr/scaler/Mmux_answer3_A141 (cr/scaler/Mmux_answer3_rs_A<21>)
+     LUT5:I0->O            1   0.203   0.000  cr/scaler/Mmux_answer3_rs_lut<21> (cr/scaler/Mmux_answer3_rs_lut<21>)
+     MUXCY:S->O            1   0.172   0.000  cr/scaler/Mmux_answer3_rs_cy<21> (cr/scaler/Mmux_answer3_rs_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler/Mmux_answer3_rs_cy<22> (cr/scaler/Mmux_answer3_rs_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler/Mmux_answer3_rs_cy<23> (cr/scaler/Mmux_answer3_rs_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler/Mmux_answer3_rs_cy<24> (cr/scaler/Mmux_answer3_rs_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler/Mmux_answer3_rs_cy<25> (cr/scaler/Mmux_answer3_rs_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler/Mmux_answer3_rs_cy<26> (cr/scaler/Mmux_answer3_rs_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler/Mmux_answer3_rs_cy<27> (cr/scaler/Mmux_answer3_rs_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler/Mmux_answer3_rs_cy<28> (cr/scaler/Mmux_answer3_rs_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler/Mmux_answer3_rs_cy<29> (cr/scaler/Mmux_answer3_rs_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  cr/scaler/Mmux_answer3_rs_cy<30> (cr/scaler/Mmux_answer3_rs_cy<30>)
+     XORCY:CI->O           1   0.180   0.579  cr/scaler/Mmux_answer3_rs_xor<31> (rotated_x_31_OBUF)
+     OBUF:I->O                 2.571          rotated_x_31_OBUF (rotated_x<31>)
+    ----------------------------------------
+    Total                     10.936ns (5.509ns logic, 5.427ns route)
+                                       (50.4% logic, 49.6% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 5988 / 64
+-------------------------------------------------------------------------
+Delay:               9.147ns (Levels of Logic = 36)
+  Source:            mode<0> (PAD)
+  Destination:       rotated_x<31> (PAD)
+
+  Data Path: mode<0> to rotated_x<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           880   1.222   2.523  mode_0_IBUF (mode_0_IBUF)
+     LUT5:I0->O            1   0.203   0.924  cr/scaler2/Mmux_answer3_A110 (cr/scaler2/Mmux_answer3_rs_A<0>)
+     LUT5:I0->O            1   0.203   0.000  cr/scaler2/Mmux_answer3_rs_lut<0> (cr/scaler2/Mmux_answer3_rs_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  cr/scaler2/Mmux_answer3_rs_cy<0> (cr/scaler2/Mmux_answer3_rs_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<1> (cr/scaler2/Mmux_answer3_rs_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<2> (cr/scaler2/Mmux_answer3_rs_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<3> (cr/scaler2/Mmux_answer3_rs_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<4> (cr/scaler2/Mmux_answer3_rs_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<5> (cr/scaler2/Mmux_answer3_rs_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<6> (cr/scaler2/Mmux_answer3_rs_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<7> (cr/scaler2/Mmux_answer3_rs_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<8> (cr/scaler2/Mmux_answer3_rs_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<9> (cr/scaler2/Mmux_answer3_rs_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<10> (cr/scaler2/Mmux_answer3_rs_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<11> (cr/scaler2/Mmux_answer3_rs_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<12> (cr/scaler2/Mmux_answer3_rs_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<13> (cr/scaler2/Mmux_answer3_rs_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<14> (cr/scaler2/Mmux_answer3_rs_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<15> (cr/scaler2/Mmux_answer3_rs_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<16> (cr/scaler2/Mmux_answer3_rs_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<17> (cr/scaler2/Mmux_answer3_rs_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<18> (cr/scaler2/Mmux_answer3_rs_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<19> (cr/scaler2/Mmux_answer3_rs_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<20> (cr/scaler2/Mmux_answer3_rs_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<21> (cr/scaler2/Mmux_answer3_rs_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<22> (cr/scaler2/Mmux_answer3_rs_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<23> (cr/scaler2/Mmux_answer3_rs_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<24> (cr/scaler2/Mmux_answer3_rs_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<25> (cr/scaler2/Mmux_answer3_rs_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<26> (cr/scaler2/Mmux_answer3_rs_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<27> (cr/scaler2/Mmux_answer3_rs_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<28> (cr/scaler2/Mmux_answer3_rs_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<29> (cr/scaler2/Mmux_answer3_rs_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  cr/scaler2/Mmux_answer3_rs_cy<30> (cr/scaler2/Mmux_answer3_rs_cy<30>)
+     XORCY:CI->O           1   0.180   0.579  cr/scaler2/Mmux_answer3_rs_xor<31> (rotated_y_31_OBUF)
+     OBUF:I->O                 2.571          rotated_y_31_OBUF (rotated_y<31>)
+    ----------------------------------------
+    Total                      9.147ns (5.121ns logic, 4.026ns route)
+                                       (56.0% logic, 44.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    4.003|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.73 secs
+ 
+--> 
+
+Total memory usage is 4538352 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

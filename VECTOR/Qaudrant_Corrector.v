@@ -1,6 +1,6 @@
 `include "CONSTANTS.v"
 
-module Quardrant_Corrector(
+module Quadrant_Corrector(
     input [31:0] x,
     input [31:0] y,
     input[31:0] angle,

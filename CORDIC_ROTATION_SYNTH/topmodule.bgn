@@ -1,0 +1,360 @@
+Release 14.7 - Bitgen P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Loading device for application Rf_Device from file '7a100t.nph' in environment
+D:\xilinx\14.7\ISE_DS\ISE\.
+   "TopModule" is an NCD, version 3.2, device xa7a100t, package csg324, speed
+-2i
+Opened constraints file TopModule.pcf.
+
+Mon Aug 03 23:45:38 2020
+
+D:\xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:3 -g CclkPin:PullUp -g M0Pin:PullUp -g M1Pin:PullUp -g M2Pin:PullUp -g ProgPin:PullUp -g InitPin:Pullup -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g Disable_JTAG:No -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g ExtMasterCclk_en:Disable -g ConfigFallback:Disable -g BPI_page_size:1 -g BPI_sync_mode:Disable -g SPI_32bit_addr:No -g SPI_buswidth:1 -g SPI_Fall_Edge:No -g OverTempPowerDown:Disable -g USR_ACCESS:None -g JTAG_XADC:Enable -g DCIUpdateMode:AsRequired -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g Match_cycle:Auto -g Security:None -g ICAP_select:Auto -g DonePipe:Yes -g Encrypt:No TopModule.ncd 
+
+ERROR:Bitgen:342 - This design contains pins which have locations (LOC) that are
+   not user-assigned or I/O Standards (IOSTANDARD) that are not user-assigned. 
+   This may cause I/O contention or incompatibility with the board power or
+   connectivity affecting performance, signal integrity or in extreme cases
+   cause damage to the device or the components to which it is connected.  To
+   prevent this error, it is highly suggested to specify all pin locations and
+   I/O standards to avoid potential contention or conflicts and allow proper
+   bitstream creation.  To demote this error to a warning and allow bitstream
+   creation with unspecified I/O location or standards, you may apply the
+   following bitgen switch: -g UnconstrainedPins:Allow
+This message applies to the following I/O ports:
+   angle<21>
+   angle<22>
+   angle<23>
+   angle<24>
+   angle<25>
+   angle<26>
+   angle<27>
+   angle<28>
+   rotated_x<11>
+   rotated_x<12>
+   angle<31>
+   rotated_x<14>
+   rotated_x<15>
+   rotated_x<16>
+   rotated_x<17>
+   rotated_x<18>
+   rotated_x<19>
+   rotated_x<20>
+   rotated_x<21>
+   rotated_x<22>
+   rotated_x<23>
+   rotated_x<24>
+   rotated_x<25>
+   rotated_x<26>
+   rotated_x<27>
+   rotated_x<28>
+   rotated_x<29>
+   rotated_x<30>
+   rotated_x<31>
+   angle<0>
+   angle<1>
+   angle<2>
+   angle<3>
+   angle<4>
+   angle<5>
+   angle<6>
+   angle<7>
+   angle<8>
+   angle<9>
+   angle<10>
+   angle<11>
+   angle<12>
+   angle<13>
+   angle<14>
+   angle<15>
+   angle<16>
+   angle<17>
+   angle<18>
+   angle<19>
+   angle<20>
+   x<0>
+   x<1>
+   x<2>
+   x<3>
+   x<4>
+   x<5>
+   x<6>
+   x<7>
+   x<8>
+   x<9>
+   x<10>
+   x<11>
+   x<12>
+   x<13>
+   x<14>
+   y<0>
+   y<1>
+   y<2>
+   y<3>
+   y<4>
+   y<5>
+   y<6>
+   y<7>
+   y<8>
+   y<9>
+   y<17>
+   y<14>
+   y<19>
+   y<16>
+   y<11>
+   y<15>
+   y<13>
+   y<10>
+   y<18>
+   y<12>
+   y<20>
+   y<21>
+   y<22>
+   y<23>
+   y<24>
+   y<25>
+   y<26>
+   y<27>
+   y<28>
+   y<29>
+   y<30>
+   y<31>
+   rotated_x<0>
+   rotated_x<1>
+   rotated_x<2>
+   rotated_x<3>
+   rotated_x<4>
+   rotated_x<5>
+   rotated_x<6>
+   rotated_x<7>
+   rotated_x<8>
+   rotated_x<9>
+   rotated_x<10>
+   rotated_y<5>
+   rotated_y<3>
+   rotated_x<13>
+   angle<29>
+   rotated_y<2>
+   rotated_y<0>
+   rotated_y<1>
+   mode<1>
+   angle<30>
+   rotated_y<4>
+   mode<0>
+   rotated_y<6>
+   rotated_y<7>
+   rotated_y<8>
+   rotated_y<9>
+   rotated_y<10>
+   rotated_y<11>
+   rotated_y<12>
+   rotated_y<13>
+   rotated_y<14>
+   rotated_y<15>
+   rotated_y<16>
+   rotated_y<17>
+   rotated_y<18>
+   rotated_y<19>
+   rotated_y<20>
+   rotated_y<21>
+   rotated_y<22>
+   rotated_y<23>
+   rotated_y<24>
+   rotated_y<25>
+   rotated_y<26>
+   rotated_y<27>
+   rotated_y<28>
+   rotated_y<29>
+   rotated_y<30>
+   rotated_y<31>
+   final_angle<17>
+   final_angle<18>
+   final_angle<19>
+   final_angle<20>
+   final_angle<21>
+   final_angle<22>
+   final_angle<23>
+   final_angle<24>
+   final_angle<25>
+   final_angle<26>
+   final_angle<27>
+   final_angle<28>
+   final_angle<29>
+   final_angle<30>
+   final_angle<31>
+   x<15>
+   x<16>
+   x<17>
+   x<18>
+   x<28>
+   x<20>
+   clock
+   x<31>
+   x<29>
+   x<26>
+   x<21>
+   x<25>
+   x<23>
+   x<27>
+   x<19>
+   x<22>
+   x<30>
+   x<24>
+   final_angle<0>
+   final_angle<1>
+   final_angle<2>
+   final_angle<3>
+   final_angle<4>
+   final_angle<5>
+   final_angle<6>
+   final_angle<7>
+   final_angle<8>
+   final_angle<9>
+   final_angle<10>
+   final_angle<11>
+   final_angle<12>
+   final_angle<13>
+   final_angle<14>
+   final_angle<15>
+   final_angle<16>
+INFO:Bitgen:40 - Replacing "Auto" with "NoWait" for option "Match_cycle".  Most
+   commonly, bitgen has determined and will use a specific value instead of the
+   generic command-line value of "Auto".  Alternately, this message appears if
+   the same option is specified multiple times on the command-line.  In this
+   case, the option listed last will be used.
+ERROR:Bitgen:157 - Bitgen will terminate because of the above errors.
+Summary of Bitgen Options:
++----------------------+----------------------+
+| Option Name          | Current Setting      |
++----------------------+----------------------+
+| Compress             | (Not Specified)*     |
++----------------------+----------------------+
+| Readback             | (Not Specified)*     |
++----------------------+----------------------+
+| CRC                  | Enable**             |
++----------------------+----------------------+
+| DebugBitstream       | No**                 |
++----------------------+----------------------+
+| ConfigRate           | 3**                  |
++----------------------+----------------------+
+| StartupClk           | Cclk**               |
++----------------------+----------------------+
+| CclkPin              | Pullup**             |
++----------------------+----------------------+
+| DonePin              | Pullup*              |
++----------------------+----------------------+
+| M0Pin                | Pullup**             |
++----------------------+----------------------+
+| M1Pin                | Pullup**             |
++----------------------+----------------------+
+| M2Pin                | Pullup**             |
++----------------------+----------------------+
+| ProgPin              | Pullup**             |
++----------------------+----------------------+
+| InitPin              | Pullup**             |
++----------------------+----------------------+
+| TckPin               | Pullup**             |
++----------------------+----------------------+
+| TdiPin               | Pullup**             |
++----------------------+----------------------+
+| TdoPin               | Pullup**             |
++----------------------+----------------------+
+| TmsPin               | Pullup**             |
++----------------------+----------------------+
+| UnusedPin            | Pulldown**           |
++----------------------+----------------------+
+| GWE_cycle            | 6**                  |
++----------------------+----------------------+
+| GTS_cycle            | 5**                  |
++----------------------+----------------------+
+| OverTempPowerDown    | Disable**            |
++----------------------+----------------------+
+| LCK_cycle            | NoWait*              |
++----------------------+----------------------+
+| Match_cycle          | NoWait               |
++----------------------+----------------------+
+| DONE_cycle           | 4**                  |
++----------------------+----------------------+
+| Persist              | No*                  |
++----------------------+----------------------+
+| DonePipe             | Yes**                |
++----------------------+----------------------+
+| Security             | None**               |
++----------------------+----------------------+
+| UserID               | 0xFFFFFFFF**         |
++----------------------+----------------------+
+| ActiveReconfig       | No*                  |
++----------------------+----------------------+
+| Encrypt              | No**                 |
++----------------------+----------------------+
+| EncryptKeySelect     | bbram*               |
++----------------------+----------------------+
+| Key0                 | pick*                |
++----------------------+----------------------+
+| StartCBC             | pick*                |
++----------------------+----------------------+
+| HKey                 | pick*                |
++----------------------+----------------------+
+| KeyFile              | (Not Specified)*     |
++----------------------+----------------------+
+| DCIUpdateMode        | AsRequired**         |
++----------------------+----------------------+
+| ICAP_Select          | Auto**               |
++----------------------+----------------------+
+| ConfigFallback       | Disable**            |
++----------------------+----------------------+
+| SelectMAPAbort       | Enable*              |
++----------------------+----------------------+
+| BPI_page_size        | 1**                  |
++----------------------+----------------------+
+| BPI_1st_read_cycle   | 1*                   |
++----------------------+----------------------+
+| next_config_addr     | None*                |
++----------------------+----------------------+
+| next_config_reboot   | Enable*              |
++----------------------+----------------------+
+| InitSignalsError     | Enable*              |
++----------------------+----------------------+
+| XADCPartialReconfig  | Disable*             |
++----------------------+----------------------+
+| XADCEnhancedLinearity | Off*                 |
++----------------------+----------------------+
+| JTAG_XADC            | Enable**             |
++----------------------+----------------------+
+| Disable_JTAG         | No**                 |
++----------------------+----------------------+
+| XADCPowerDown        | Disable*             |
++----------------------+----------------------+
+| Partial              | (Not Specified)*     |
++----------------------+----------------------+
+| ExtMasterCclk_en     | Disable**            |
++----------------------+----------------------+
+| BPI_sync_mode        | Disable**            |
++----------------------+----------------------+
+| SPI_32bit_addr       | No**                 |
++----------------------+----------------------+
+| SPI_buswidth         | 1**                  |
++----------------------+----------------------+
+| SPI_Fall_Edge        | No**                 |
++----------------------+----------------------+
+| RevisionSelect       | 00*                  |
++----------------------+----------------------+
+| RevisionSelect_tristate | Disable*             |
++----------------------+----------------------+
+| TIMER_CFG            | None*                |
++----------------------+----------------------+
+| TIMER_USR            | None*                |
++----------------------+----------------------+
+| USR_ACCESS           | None**               |
++----------------------+----------------------+
+| TimeStamp            | Default*             |
++----------------------+----------------------+
+| IEEE1532             | No*                  |
++----------------------+----------------------+
+| Binary               | No**                 |
++----------------------+----------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+There were 0 CONFIG constraint(s) processed from TopModule.pcf.
+
+
