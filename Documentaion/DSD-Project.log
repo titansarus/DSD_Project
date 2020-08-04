@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.24)  4 AUG 2020 02:22
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.24)  4 AUG 2020 23:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1509,38 +1509,158 @@ Underfull \hbox (badness 10000) in paragraph at lines 376--379
  []
 
 [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
-File: CORDICVECTOR.pdf Graphic file (type pdf)
-<use CORDICVECTOR.pdf>
-File: CORDICVECTOR.pdf Graphic file (type pdf)
-<use CORDICVECTOR.pdf>
-File: CORDICVECTOR.pdf Graphic file (type pdf)
-<use CORDICVECTOR.pdf, page 1>
-File: CORDICVECTOR.pdf Graphic file (type pdf)
-<use CORDICVECTOR.pdf, page 1>
-File: CORDICVECTOR.pdf Graphic file (type pdf)
-<use CORDICVECTOR.pdf, page 1>
-File: CORDICVECTOR.pdf Graphic file (type pdf)
-<use CORDICVECTOR.pdf, page 1>
-File: CORDICVECTOR.pdf Graphic file (type pdf)
-<use CORDICVECTOR.pdf, page 1>
- [18
+
+LaTeX Warning: File `DSD Project.pdf' not found on input line 939.
+
+File: DSD Project.pdf Graphic file (type pdf)
+<use DSD Project.pdf>
+
+LaTeX Warning: File `DSD Project.pdf' not found on input line 939.
+
+File: DSD Project.pdf Graphic file (type pdf)
+<use DSD Project.pdf>
+
+LaTeX Warning: File `DSD Project.pdf' not found on input line 939.
+
+File: DSD Project.pdf Graphic file (type pdf)
+<use DSD Project.pdf, page 1>
+
+LaTeX Warning: File `DSD Project.pdf' not found on input line 939.
+
+File: DSD Project.pdf Graphic file (type pdf)
+<use DSD Project.pdf, page 1>
+
+LaTeX Warning: File `DSD Project.pdf' not found on input line 939.
+
+File: DSD Project.pdf Graphic file (type pdf)
+<use DSD Project.pdf, page 1>
+
+LaTeX Warning: File `DSD Project.pdf' not found on input line 939.
+
+File: DSD Project.pdf Graphic file (type pdf)
+<use DSD Project.pdf, page 1>
+
+LaTeX Warning: File `DSD Project.pdf' not found on input line 939.
+
+File: DSD Project.pdf Graphic file (type pdf)
+<use DSD Project.pdf, page 1>
+[18
 
 ]
-File: CORDICROTATION.pdf Graphic file (type pdf)
-<use CORDICROTATION.pdf>
-File: CORDICROTATION.pdf Graphic file (type pdf)
-<use CORDICROTATION.pdf>
-File: CORDICROTATION.pdf Graphic file (type pdf)
-<use CORDICROTATION.pdf, page 1>
-File: CORDICROTATION.pdf Graphic file (type pdf)
-<use CORDICROTATION.pdf, page 1>
-File: CORDICROTATION.pdf Graphic file (type pdf)
-<use CORDICROTATION.pdf, page 1>
-File: CORDICROTATION.pdf Graphic file (type pdf)
-<use CORDICROTATION.pdf, page 1>
-File: CORDICROTATION.pdf Graphic file (type pdf)
-<use CORDICROTATION.pdf, page 1>
- [19
+
+LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 950.
+
+File: DSD Project - Rotation.pdf Graphic file (type pdf)
+<use DSD Project - Rotation.pdf>
+
+LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 950.
+
+File: DSD Project - Rotation.pdf Graphic file (type pdf)
+<use DSD Project - Rotation.pdf>
+
+LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 950.
+
+File: DSD Project - Rotation.pdf Graphic file (type pdf)
+<use DSD Project - Rotation.pdf, page 1>
+
+LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 950.
+
+File: DSD Project - Rotation.pdf Graphic file (type pdf)
+<use DSD Project - Rotation.pdf, page 1>
+
+LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 950.
+
+File: DSD Project - Rotation.pdf Graphic file (type pdf)
+<use DSD Project - Rotation.pdf, page 1>
+
+LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 950.
+
+File: DSD Project - Rotation.pdf Graphic file (type pdf)
+<use DSD Project - Rotation.pdf, page 1>
+
+LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 950.
+
+File: DSD Project - Rotation.pdf Graphic file (type pdf)
+<use DSD Project - Rotation.pdf, page 1>
+[19
+
+
+]
+
+LaTeX Warning: File `UML Design.pdf' not found on input line 958.
+
+File: UML Design.pdf Graphic file (type pdf)
+<use UML Design.pdf>
+
+LaTeX Warning: File `UML Design.pdf' not found on input line 958.
+
+File: UML Design.pdf Graphic file (type pdf)
+<use UML Design.pdf>
+
+LaTeX Warning: File `UML Design.pdf' not found on input line 958.
+
+File: UML Design.pdf Graphic file (type pdf)
+<use UML Design.pdf, page 1>
+
+LaTeX Warning: File `UML Design.pdf' not found on input line 958.
+
+File: UML Design.pdf Graphic file (type pdf)
+<use UML Design.pdf, page 1>
+
+LaTeX Warning: File `UML Design.pdf' not found on input line 958.
+
+File: UML Design.pdf Graphic file (type pdf)
+<use UML Design.pdf, page 1>
+
+LaTeX Warning: File `UML Design.pdf' not found on input line 958.
+
+File: UML Design.pdf Graphic file (type pdf)
+<use UML Design.pdf, page 1>
+
+LaTeX Warning: File `UML Design.pdf' not found on input line 958.
+
+File: UML Design.pdf Graphic file (type pdf)
+<use UML Design.pdf, page 1>
+[20
+
+
+]
+
+LaTeX Warning: File `UML Design2.pdf' not found on input line 967.
+
+File: UML Design2.pdf Graphic file (type pdf)
+<use UML Design2.pdf>
+
+LaTeX Warning: File `UML Design2.pdf' not found on input line 967.
+
+File: UML Design2.pdf Graphic file (type pdf)
+<use UML Design2.pdf>
+
+LaTeX Warning: File `UML Design2.pdf' not found on input line 967.
+
+File: UML Design2.pdf Graphic file (type pdf)
+<use UML Design2.pdf, page 1>
+
+LaTeX Warning: File `UML Design2.pdf' not found on input line 967.
+
+File: UML Design2.pdf Graphic file (type pdf)
+<use UML Design2.pdf, page 1>
+
+LaTeX Warning: File `UML Design2.pdf' not found on input line 967.
+
+File: UML Design2.pdf Graphic file (type pdf)
+<use UML Design2.pdf, page 1>
+
+LaTeX Warning: File `UML Design2.pdf' not found on input line 967.
+
+File: UML Design2.pdf Graphic file (type pdf)
+<use UML Design2.pdf, page 1>
+
+LaTeX Warning: File `UML Design2.pdf' not found on input line 967.
+
+File: UML Design2.pdf Graphic file (type pdf)
+<use UML Design2.pdf, page 1>
+[21
 
 
 ]
@@ -1558,7 +1678,7 @@ File: BigPicture_Rotation.pdf Graphic file (type pdf)
 <use BigPicture_Rotation.pdf, page 1>
 File: BigPicture_Rotation.pdf Graphic file (type pdf)
 <use BigPicture_Rotation.pdf, page 1>
- [20
+ [22
 
 
 ]
@@ -1576,49 +1696,49 @@ File: CORDIC_SMALL.pdf Graphic file (type pdf)
 <use CORDIC_SMALL.pdf, page 1>
 File: CORDIC_SMALL.pdf Graphic file (type pdf)
 <use CORDIC_SMALL.pdf, page 1>
- [21
-
-
-]
-File: BigPicture_Vector.pdf Graphic file (type pdf)
-<use BigPicture_Vector.pdf>
-File: BigPicture_Vector.pdf Graphic file (type pdf)
-<use BigPicture_Vector.pdf>
-File: BigPicture_Vector.pdf Graphic file (type pdf)
-<use BigPicture_Vector.pdf, page 1>
-File: BigPicture_Vector.pdf Graphic file (type pdf)
-<use BigPicture_Vector.pdf, page 1>
-File: BigPicture_Vector.pdf Graphic file (type pdf)
-<use BigPicture_Vector.pdf, page 1>
-File: BigPicture_Vector.pdf Graphic file (type pdf)
-<use BigPicture_Vector.pdf, page 1>
-File: BigPicture_Vector.pdf Graphic file (type pdf)
-<use BigPicture_Vector.pdf, page 1>
-
-[22
-
-
-]
-File: CORDIC_VECTOR_SMALL.pdf Graphic file (type pdf)
-<use CORDIC_VECTOR_SMALL.pdf>
-File: CORDIC_VECTOR_SMALL.pdf Graphic file (type pdf)
-<use CORDIC_VECTOR_SMALL.pdf>
-File: CORDIC_VECTOR_SMALL.pdf Graphic file (type pdf)
-<use CORDIC_VECTOR_SMALL.pdf, page 1>
-File: CORDIC_VECTOR_SMALL.pdf Graphic file (type pdf)
-<use CORDIC_VECTOR_SMALL.pdf, page 1>
-File: CORDIC_VECTOR_SMALL.pdf Graphic file (type pdf)
-<use CORDIC_VECTOR_SMALL.pdf, page 1>
-File: CORDIC_VECTOR_SMALL.pdf Graphic file (type pdf)
-<use CORDIC_VECTOR_SMALL.pdf, page 1>
-File: CORDIC_VECTOR_SMALL.pdf Graphic file (type pdf)
-<use CORDIC_VECTOR_SMALL.pdf, page 1>
  [23
 
 
-] [24
+]
+File: BigPicture_Vector.pdf Graphic file (type pdf)
+<use BigPicture_Vector.pdf>
+File: BigPicture_Vector.pdf Graphic file (type pdf)
+<use BigPicture_Vector.pdf>
+File: BigPicture_Vector.pdf Graphic file (type pdf)
+<use BigPicture_Vector.pdf, page 1>
+File: BigPicture_Vector.pdf Graphic file (type pdf)
+<use BigPicture_Vector.pdf, page 1>
+File: BigPicture_Vector.pdf Graphic file (type pdf)
+<use BigPicture_Vector.pdf, page 1>
+File: BigPicture_Vector.pdf Graphic file (type pdf)
+<use BigPicture_Vector.pdf, page 1>
+File: BigPicture_Vector.pdf Graphic file (type pdf)
+<use BigPicture_Vector.pdf, page 1>
+ [24
 
-] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35]
+
+]
+File: CORDIC_VECTOR_SMALL.pdf Graphic file (type pdf)
+<use CORDIC_VECTOR_SMALL.pdf>
+File: CORDIC_VECTOR_SMALL.pdf Graphic file (type pdf)
+<use CORDIC_VECTOR_SMALL.pdf>
+File: CORDIC_VECTOR_SMALL.pdf Graphic file (type pdf)
+<use CORDIC_VECTOR_SMALL.pdf, page 1>
+File: CORDIC_VECTOR_SMALL.pdf Graphic file (type pdf)
+<use CORDIC_VECTOR_SMALL.pdf, page 1>
+File: CORDIC_VECTOR_SMALL.pdf Graphic file (type pdf)
+<use CORDIC_VECTOR_SMALL.pdf, page 1>
+File: CORDIC_VECTOR_SMALL.pdf Graphic file (type pdf)
+<use CORDIC_VECTOR_SMALL.pdf, page 1>
+File: CORDIC_VECTOR_SMALL.pdf Graphic file (type pdf)
+<use CORDIC_VECTOR_SMALL.pdf, page 1>
+ [25
+
+
+] [26
+
+] [27] [28] [29] [30] [31] [32] [33] [34] [35]
+[36] [37]
 Missing character: There is no ب in font [lmroman10-regular]/OT:script=latn;lan
 guage=DFLT;mapping=tex-text;!
 Missing character: There is no ‍ in font [lmroman10-regular]/OT:script=latn;lan
@@ -1637,145 +1757,144 @@ Missing character: There is no ‍ in font [lmroman10-regular]/OT:script=latn;la
 guage=DFLT;mapping=tex-text;!
 Missing character: There is no ر in font [lmroman10-regular]/OT:script=latn;lan
 guage=DFLT;mapping=tex-text;!
- [36]
-[37] [38] [39]
-Overfull \hbox (5.1358pt too wide) in paragraph at lines 1712--1712
+ [38] [39] [40] [41]
+Overfull \hbox (5.1358pt too wide) in paragraph at lines 1730--1730
 [][]  \TU/lmtt/m/n/12 Number of Slice Registers:                 2,926 out of 1
 84,304    1%[] []
  []
 
 
-Overfull \hbox (5.14775pt too wide) in paragraph at lines 1712--1712
+Overfull \hbox (5.14775pt too wide) in paragraph at lines 1730--1730
 [][]  \TU/lmtt/m/n/12 Number of Slice LUTs:                      5,205 out of  
 92,152    5%[] []
  []
 
 
-Overfull \hbox (5.13577pt too wide) in paragraph at lines 1712--1712
+Overfull \hbox (5.13577pt too wide) in paragraph at lines 1730--1730
 [][]    \TU/lmtt/m/n/12 Number used as logic:                    5,198 out of  
 92,152    5%[] []
  []
 
 
-Overfull \hbox (5.14774pt too wide) in paragraph at lines 1712--1712
+Overfull \hbox (5.14774pt too wide) in paragraph at lines 1730--1730
 [][]    \TU/lmtt/m/n/12 Number used as Memory:                       0 out of  
 21,680    0%[] []
  []
 
-[40]
-Overfull \hbox (5.13579pt too wide) in paragraph at lines 1712--1712
+[42]
+Overfull \hbox (5.13579pt too wide) in paragraph at lines 1730--1730
 [][]  \TU/lmtt/m/n/12 Number of occupied Slices:                 1,369 out of  
 23,038    5%[] []
  []
 
 
-Overfull \hbox (5.11179pt too wide) in paragraph at lines 1712--1712
+Overfull \hbox (5.11179pt too wide) in paragraph at lines 1730--1730
 [][]  \TU/lmtt/m/n/12 Number of MUXCYs used:                     4,160 out of  
 46,076    9%[] []
  []
 
 
-Overfull \hbox (5.14783pt too wide) in paragraph at lines 1712--1712
+Overfull \hbox (5.14783pt too wide) in paragraph at lines 1730--1730
 [][]    \TU/lmtt/m/n/12 Number with an unused Flip Flop:         2,289 out of  
  5,214   43%[] []
  []
 
 
-Overfull \hbox (5.14775pt too wide) in paragraph at lines 1712--1712
+Overfull \hbox (5.14775pt too wide) in paragraph at lines 1730--1730
 [][]    \TU/lmtt/m/n/12 Number with an unused LUT:                   9 out of  
  5,214    1%[] []
  []
 
 
-Overfull \hbox (5.13585pt too wide) in paragraph at lines 1712--1712
+Overfull \hbox (5.13585pt too wide) in paragraph at lines 1730--1730
 [][]    \TU/lmtt/m/n/12 Number of fully used LUT-FF pairs:       2,916 out of  
  5,214   55%[] []
  []
 
 
-Overfull \hbox (5.15979pt too wide) in paragraph at lines 1712--1712
+Overfull \hbox (5.15979pt too wide) in paragraph at lines 1730--1730
 [][]      \TU/lmtt/m/n/12 to control set restrictions:               4 out of 1
 84,304    1%[] []
  []
 
 
-Overfull \hbox (5.1598pt too wide) in paragraph at lines 1769--1769
+Overfull \hbox (5.1598pt too wide) in paragraph at lines 1787--1787
 [][]  \TU/lmtt/m/n/12 Number of Slice Registers:                 1,752 out of 1
 84,304    1%[] []
  []
 
 
-Overfull \hbox (5.14775pt too wide) in paragraph at lines 1769--1769
+Overfull \hbox (5.14775pt too wide) in paragraph at lines 1787--1787
 [][]  \TU/lmtt/m/n/12 Number of Slice LUTs:                      3,271 out of  
 92,152    3%[] []
  []
 
 
-Overfull \hbox (5.13577pt too wide) in paragraph at lines 1769--1769
+Overfull \hbox (5.13577pt too wide) in paragraph at lines 1787--1787
 [][]    \TU/lmtt/m/n/12 Number used as logic:                    3,265 out of  
 92,152    3%[] []
  []
 
-[41]
-Overfull \hbox (5.14774pt too wide) in paragraph at lines 1769--1769
+[43]
+Overfull \hbox (5.14774pt too wide) in paragraph at lines 1787--1787
 [][]    \TU/lmtt/m/n/12 Number used as Memory:                       0 out of  
 21,680    0%[] []
  []
 
 
-Overfull \hbox (5.13579pt too wide) in paragraph at lines 1769--1769
+Overfull \hbox (5.13579pt too wide) in paragraph at lines 1787--1787
 [][]  \TU/lmtt/m/n/12 Number of occupied Slices:                   866 out of  
 23,038    3%[] []
  []
 
 
-Overfull \hbox (5.12378pt too wide) in paragraph at lines 1769--1769
+Overfull \hbox (5.12378pt too wide) in paragraph at lines 1787--1787
 [][]  \TU/lmtt/m/n/12 Number of MUXCYs used:                     2,624 out of  
 46,076    5%[] []
  []
 
 
-Overfull \hbox (5.13582pt too wide) in paragraph at lines 1769--1769
+Overfull \hbox (5.13582pt too wide) in paragraph at lines 1787--1787
 [][]    \TU/lmtt/m/n/12 Number with an unused Flip Flop:         1,524 out of  
  3,276   46%[] []
  []
 
 
-Overfull \hbox (5.14775pt too wide) in paragraph at lines 1769--1769
+Overfull \hbox (5.14775pt too wide) in paragraph at lines 1787--1787
 [][]    \TU/lmtt/m/n/12 Number with an unused LUT:                   5 out of  
  3,276    1%[] []
  []
 
 
-Overfull \hbox (5.14786pt too wide) in paragraph at lines 1769--1769
+Overfull \hbox (5.14786pt too wide) in paragraph at lines 1787--1787
 [][]    \TU/lmtt/m/n/12 Number of fully used LUT-FF pairs:       1,747 out of  
  3,276   53%[] []
  []
 
 
-Overfull \hbox (5.15979pt too wide) in paragraph at lines 1769--1769
+Overfull \hbox (5.15979pt too wide) in paragraph at lines 1787--1787
 [][]      \TU/lmtt/m/n/12 to control set restrictions:               2 out of 1
 84,304    1%[] []
  []
 
-[42] (./DSD-Project.bbl) [43]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1782.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1782.
+[44] (./DSD-Project.bbl) [45]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1800.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1800.
  (./DSD-Project.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1782.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1782.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1800.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1800.
 
 Package rerunfilecheck Info: File `DSD-Project.out' has not changed.
 (rerunfilecheck)             Checksum: C961D900083F219A3B7A2C8B35461B41.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1782.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1800.
  ) 
 Here is how much of TeX's memory you used:
- 39173 strings out of 492922
- 774308 string characters out of 6136751
- 959333 words of memory out of 5000000
- 42576 multiletter control sequences out of 15000+600000
+ 39189 strings out of 492922
+ 774694 string characters out of 6136751
+ 959334 words of memory out of 5000000
+ 42586 multiletter control sequences out of 15000+600000
  541239 words of font info for 76 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 56i,20n,73p,4818b,581s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,20n,73p,4818b,580s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on DSD-Project.pdf (44 pages).
+Output written on DSD-Project.pdf (46 pages).
