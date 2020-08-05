@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.24)  4 AUG 2020 23:52
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.24)  5 AUG 2020 21:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -504,14 +504,7 @@ File: ppxetex.def 2017/10/31 v0.5l Pdfpages driver for XeTeX (AM)
 \c@AM@survey=\count139
 \AM@templatesizebox=\box49
 )
-(c:/texlive/2019/texmf-dist/tex/latex/tocbibind/tocbibind.sty
-Package: tocbibind 2010/10/13 v1.5k extra ToC listings
-Package tocbibind Info: The document has section divisions on input line 50.
-
-
-Package tocbibind Note: Using section or other style headings.
-
-) (c:/texlive/2019/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(c:/texlive/2019/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (c:/texlive/2019/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (c:/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks30
@@ -1237,10 +1230,6 @@ f package for XeTeX engine
 ) (c:/texlive/2019/texmf-dist/tex/xelatex/bidi/array-xetex-bidi.def
 File: array-xetex-bidi.def 2015/11/07 v0.3 bidi adaptations for array package f
 or XeTeX engine
-)
-(c:/texlive/2019/texmf-dist/tex/xelatex/bidi/tocbibind-xetex-bidi.def
-File: tocbibind-xetex-bidi.def 2017/06/09 v0.4 bidi adaptations for tocbibind p
-ackage for XeTeX engine
 ))
 (c:/texlive/2019/texmf-dist/tex/xelatex/bidi/loadingorder-xetex-bidi.def
 File: loadingorder-xetex-bidi.def 2017/12/29 v0.97 making sure that bidi is the
@@ -1374,7 +1363,7 @@ an-tex-text;"
 sian-tex-text;"
 (fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.: 
 
-LaTeX Font Info:    Try loading font information for T1+txtt on input line 53.
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 52.
 
 (c:/texlive/2019/texmf-dist/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
@@ -1386,26 +1375,26 @@ LaTeX Warning: Unused global option(s):
 (./DSD-Project.aux)
 \openout1 = `DSD-Project.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
 \AtBeginShipoutBox=\box99
-Package hyperref Info: Link coloring ON on input line 108.
+Package hyperref Info: Link coloring ON on input line 107.
  (c:/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1414,9 +1403,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count374
 )
-LaTeX Info: Redefining \ref on input line 108.
-LaTeX Info: Redefining \pageref on input line 108.
-LaTeX Info: Redefining \nameref on input line 108.
+LaTeX Info: Redefining \ref on input line 107.
+LaTeX Info: Redefining \pageref on input line 107.
+LaTeX Info: Redefining \nameref on input line 107.
 
 (./DSD-Project.out) (./DSD-Project.out)
 \@outlinefile=\write4
@@ -1489,58 +1478,58 @@ We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
 [1] [2] [3] [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 323--326
+Underfull \hbox (badness 10000) in paragraph at lines 322--325
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--326
+Underfull \hbox (badness 10000) in paragraph at lines 322--325
 [][]
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 376--379
+Underfull \hbox (badness 10000) in paragraph at lines 375--378
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--379
+Underfull \hbox (badness 10000) in paragraph at lines 375--378
 [][]
  []
 
 [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
 
-LaTeX Warning: File `DSD Project.pdf' not found on input line 939.
+LaTeX Warning: File `DSD Project.pdf' not found on input line 938.
 
 File: DSD Project.pdf Graphic file (type pdf)
 <use DSD Project.pdf>
 
-LaTeX Warning: File `DSD Project.pdf' not found on input line 939.
+LaTeX Warning: File `DSD Project.pdf' not found on input line 938.
 
 File: DSD Project.pdf Graphic file (type pdf)
 <use DSD Project.pdf>
 
-LaTeX Warning: File `DSD Project.pdf' not found on input line 939.
+LaTeX Warning: File `DSD Project.pdf' not found on input line 938.
 
 File: DSD Project.pdf Graphic file (type pdf)
 <use DSD Project.pdf, page 1>
 
-LaTeX Warning: File `DSD Project.pdf' not found on input line 939.
+LaTeX Warning: File `DSD Project.pdf' not found on input line 938.
 
 File: DSD Project.pdf Graphic file (type pdf)
 <use DSD Project.pdf, page 1>
 
-LaTeX Warning: File `DSD Project.pdf' not found on input line 939.
+LaTeX Warning: File `DSD Project.pdf' not found on input line 938.
 
 File: DSD Project.pdf Graphic file (type pdf)
 <use DSD Project.pdf, page 1>
 
-LaTeX Warning: File `DSD Project.pdf' not found on input line 939.
+LaTeX Warning: File `DSD Project.pdf' not found on input line 938.
 
 File: DSD Project.pdf Graphic file (type pdf)
 <use DSD Project.pdf, page 1>
 
-LaTeX Warning: File `DSD Project.pdf' not found on input line 939.
+LaTeX Warning: File `DSD Project.pdf' not found on input line 938.
 
 File: DSD Project.pdf Graphic file (type pdf)
 <use DSD Project.pdf, page 1>
@@ -1548,37 +1537,37 @@ File: DSD Project.pdf Graphic file (type pdf)
 
 ]
 
-LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 950.
+LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 949.
 
 File: DSD Project - Rotation.pdf Graphic file (type pdf)
 <use DSD Project - Rotation.pdf>
 
-LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 950.
+LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 949.
 
 File: DSD Project - Rotation.pdf Graphic file (type pdf)
 <use DSD Project - Rotation.pdf>
 
-LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 950.
+LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 949.
 
 File: DSD Project - Rotation.pdf Graphic file (type pdf)
 <use DSD Project - Rotation.pdf, page 1>
 
-LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 950.
+LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 949.
 
 File: DSD Project - Rotation.pdf Graphic file (type pdf)
 <use DSD Project - Rotation.pdf, page 1>
 
-LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 950.
+LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 949.
 
 File: DSD Project - Rotation.pdf Graphic file (type pdf)
 <use DSD Project - Rotation.pdf, page 1>
 
-LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 950.
+LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 949.
 
 File: DSD Project - Rotation.pdf Graphic file (type pdf)
 <use DSD Project - Rotation.pdf, page 1>
 
-LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 950.
+LaTeX Warning: File `DSD Project - Rotation.pdf' not found on input line 949.
 
 File: DSD Project - Rotation.pdf Graphic file (type pdf)
 <use DSD Project - Rotation.pdf, page 1>
@@ -1587,37 +1576,37 @@ File: DSD Project - Rotation.pdf Graphic file (type pdf)
 
 ]
 
-LaTeX Warning: File `UML Design.pdf' not found on input line 958.
+LaTeX Warning: File `UML Design.pdf' not found on input line 957.
 
 File: UML Design.pdf Graphic file (type pdf)
 <use UML Design.pdf>
 
-LaTeX Warning: File `UML Design.pdf' not found on input line 958.
+LaTeX Warning: File `UML Design.pdf' not found on input line 957.
 
 File: UML Design.pdf Graphic file (type pdf)
 <use UML Design.pdf>
 
-LaTeX Warning: File `UML Design.pdf' not found on input line 958.
+LaTeX Warning: File `UML Design.pdf' not found on input line 957.
 
 File: UML Design.pdf Graphic file (type pdf)
 <use UML Design.pdf, page 1>
 
-LaTeX Warning: File `UML Design.pdf' not found on input line 958.
+LaTeX Warning: File `UML Design.pdf' not found on input line 957.
 
 File: UML Design.pdf Graphic file (type pdf)
 <use UML Design.pdf, page 1>
 
-LaTeX Warning: File `UML Design.pdf' not found on input line 958.
+LaTeX Warning: File `UML Design.pdf' not found on input line 957.
 
 File: UML Design.pdf Graphic file (type pdf)
 <use UML Design.pdf, page 1>
 
-LaTeX Warning: File `UML Design.pdf' not found on input line 958.
+LaTeX Warning: File `UML Design.pdf' not found on input line 957.
 
 File: UML Design.pdf Graphic file (type pdf)
 <use UML Design.pdf, page 1>
 
-LaTeX Warning: File `UML Design.pdf' not found on input line 958.
+LaTeX Warning: File `UML Design.pdf' not found on input line 957.
 
 File: UML Design.pdf Graphic file (type pdf)
 <use UML Design.pdf, page 1>
@@ -1626,37 +1615,37 @@ File: UML Design.pdf Graphic file (type pdf)
 
 ]
 
-LaTeX Warning: File `UML Design2.pdf' not found on input line 967.
+LaTeX Warning: File `UML Design2.pdf' not found on input line 966.
 
 File: UML Design2.pdf Graphic file (type pdf)
 <use UML Design2.pdf>
 
-LaTeX Warning: File `UML Design2.pdf' not found on input line 967.
+LaTeX Warning: File `UML Design2.pdf' not found on input line 966.
 
 File: UML Design2.pdf Graphic file (type pdf)
 <use UML Design2.pdf>
 
-LaTeX Warning: File `UML Design2.pdf' not found on input line 967.
+LaTeX Warning: File `UML Design2.pdf' not found on input line 966.
 
 File: UML Design2.pdf Graphic file (type pdf)
 <use UML Design2.pdf, page 1>
 
-LaTeX Warning: File `UML Design2.pdf' not found on input line 967.
+LaTeX Warning: File `UML Design2.pdf' not found on input line 966.
 
 File: UML Design2.pdf Graphic file (type pdf)
 <use UML Design2.pdf, page 1>
 
-LaTeX Warning: File `UML Design2.pdf' not found on input line 967.
+LaTeX Warning: File `UML Design2.pdf' not found on input line 966.
 
 File: UML Design2.pdf Graphic file (type pdf)
 <use UML Design2.pdf, page 1>
 
-LaTeX Warning: File `UML Design2.pdf' not found on input line 967.
+LaTeX Warning: File `UML Design2.pdf' not found on input line 966.
 
 File: UML Design2.pdf Graphic file (type pdf)
 <use UML Design2.pdf, page 1>
 
-LaTeX Warning: File `UML Design2.pdf' not found on input line 967.
+LaTeX Warning: File `UML Design2.pdf' not found on input line 966.
 
 File: UML Design2.pdf Graphic file (type pdf)
 <use UML Design2.pdf, page 1>
@@ -1758,143 +1747,143 @@ guage=DFLT;mapping=tex-text;!
 Missing character: There is no ر in font [lmroman10-regular]/OT:script=latn;lan
 guage=DFLT;mapping=tex-text;!
  [38] [39] [40] [41]
-Overfull \hbox (5.1358pt too wide) in paragraph at lines 1730--1730
+Overfull \hbox (5.1358pt too wide) in paragraph at lines 1729--1729
 [][]  \TU/lmtt/m/n/12 Number of Slice Registers:                 2,926 out of 1
 84,304    1%[] []
  []
 
 
-Overfull \hbox (5.14775pt too wide) in paragraph at lines 1730--1730
+Overfull \hbox (5.14775pt too wide) in paragraph at lines 1729--1729
 [][]  \TU/lmtt/m/n/12 Number of Slice LUTs:                      5,205 out of  
 92,152    5%[] []
  []
 
 
-Overfull \hbox (5.13577pt too wide) in paragraph at lines 1730--1730
+Overfull \hbox (5.13577pt too wide) in paragraph at lines 1729--1729
 [][]    \TU/lmtt/m/n/12 Number used as logic:                    5,198 out of  
 92,152    5%[] []
  []
 
 
-Overfull \hbox (5.14774pt too wide) in paragraph at lines 1730--1730
+Overfull \hbox (5.14774pt too wide) in paragraph at lines 1729--1729
 [][]    \TU/lmtt/m/n/12 Number used as Memory:                       0 out of  
 21,680    0%[] []
  []
 
 [42]
-Overfull \hbox (5.13579pt too wide) in paragraph at lines 1730--1730
+Overfull \hbox (5.13579pt too wide) in paragraph at lines 1729--1729
 [][]  \TU/lmtt/m/n/12 Number of occupied Slices:                 1,369 out of  
 23,038    5%[] []
  []
 
 
-Overfull \hbox (5.11179pt too wide) in paragraph at lines 1730--1730
+Overfull \hbox (5.11179pt too wide) in paragraph at lines 1729--1729
 [][]  \TU/lmtt/m/n/12 Number of MUXCYs used:                     4,160 out of  
 46,076    9%[] []
  []
 
 
-Overfull \hbox (5.14783pt too wide) in paragraph at lines 1730--1730
+Overfull \hbox (5.14783pt too wide) in paragraph at lines 1729--1729
 [][]    \TU/lmtt/m/n/12 Number with an unused Flip Flop:         2,289 out of  
  5,214   43%[] []
  []
 
 
-Overfull \hbox (5.14775pt too wide) in paragraph at lines 1730--1730
+Overfull \hbox (5.14775pt too wide) in paragraph at lines 1729--1729
 [][]    \TU/lmtt/m/n/12 Number with an unused LUT:                   9 out of  
  5,214    1%[] []
  []
 
 
-Overfull \hbox (5.13585pt too wide) in paragraph at lines 1730--1730
+Overfull \hbox (5.13585pt too wide) in paragraph at lines 1729--1729
 [][]    \TU/lmtt/m/n/12 Number of fully used LUT-FF pairs:       2,916 out of  
  5,214   55%[] []
  []
 
 
-Overfull \hbox (5.15979pt too wide) in paragraph at lines 1730--1730
+Overfull \hbox (5.15979pt too wide) in paragraph at lines 1729--1729
 [][]      \TU/lmtt/m/n/12 to control set restrictions:               4 out of 1
 84,304    1%[] []
  []
 
 
-Overfull \hbox (5.1598pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (5.1598pt too wide) in paragraph at lines 1786--1786
 [][]  \TU/lmtt/m/n/12 Number of Slice Registers:                 1,752 out of 1
 84,304    1%[] []
  []
 
 
-Overfull \hbox (5.14775pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (5.14775pt too wide) in paragraph at lines 1786--1786
 [][]  \TU/lmtt/m/n/12 Number of Slice LUTs:                      3,271 out of  
 92,152    3%[] []
  []
 
 
-Overfull \hbox (5.13577pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (5.13577pt too wide) in paragraph at lines 1786--1786
 [][]    \TU/lmtt/m/n/12 Number used as logic:                    3,265 out of  
 92,152    3%[] []
  []
 
 [43]
-Overfull \hbox (5.14774pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (5.14774pt too wide) in paragraph at lines 1786--1786
 [][]    \TU/lmtt/m/n/12 Number used as Memory:                       0 out of  
 21,680    0%[] []
  []
 
 
-Overfull \hbox (5.13579pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (5.13579pt too wide) in paragraph at lines 1786--1786
 [][]  \TU/lmtt/m/n/12 Number of occupied Slices:                   866 out of  
 23,038    3%[] []
  []
 
 
-Overfull \hbox (5.12378pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (5.12378pt too wide) in paragraph at lines 1786--1786
 [][]  \TU/lmtt/m/n/12 Number of MUXCYs used:                     2,624 out of  
 46,076    5%[] []
  []
 
 
-Overfull \hbox (5.13582pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (5.13582pt too wide) in paragraph at lines 1786--1786
 [][]    \TU/lmtt/m/n/12 Number with an unused Flip Flop:         1,524 out of  
  3,276   46%[] []
  []
 
 
-Overfull \hbox (5.14775pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (5.14775pt too wide) in paragraph at lines 1786--1786
 [][]    \TU/lmtt/m/n/12 Number with an unused LUT:                   5 out of  
  3,276    1%[] []
  []
 
 
-Overfull \hbox (5.14786pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (5.14786pt too wide) in paragraph at lines 1786--1786
 [][]    \TU/lmtt/m/n/12 Number of fully used LUT-FF pairs:       1,747 out of  
  3,276   53%[] []
  []
 
 
-Overfull \hbox (5.15979pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (5.15979pt too wide) in paragraph at lines 1786--1786
 [][]      \TU/lmtt/m/n/12 to control set restrictions:               2 out of 1
 84,304    1%[] []
  []
 
-[44] (./DSD-Project.bbl) [45]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1800.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1800.
+[44] [45] (./DSD-Project.bbl) [46]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1807.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1807.
  (./DSD-Project.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1800.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1800.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1807.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1807.
 
 Package rerunfilecheck Info: File `DSD-Project.out' has not changed.
-(rerunfilecheck)             Checksum: C961D900083F219A3B7A2C8B35461B41.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1800.
+(rerunfilecheck)             Checksum: 7445D57FF7BB845726E8C116FC8CF28D.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1807.
  ) 
 Here is how much of TeX's memory you used:
- 39189 strings out of 492922
- 774694 string characters out of 6136751
- 959334 words of memory out of 5000000
- 42586 multiletter control sequences out of 15000+600000
+ 39106 strings out of 492922
+ 773339 string characters out of 6136751
+ 959113 words of memory out of 5000000
+ 42510 multiletter control sequences out of 15000+600000
  541239 words of font info for 76 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  56i,20n,73p,4818b,580s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on DSD-Project.pdf (46 pages).
+Output written on DSD-Project.pdf (47 pages).

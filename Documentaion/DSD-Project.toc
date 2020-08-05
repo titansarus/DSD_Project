@@ -31,4 +31,4 @@
 \contentsline {section}{\numberline {4}سنتز}{42}{section.4}% 
 \contentsline {subsection}{\numberline {4.1}سنتز \lr {Rotation}}{42}{subsection.4.1}% 
 \contentsline {subsection}{\numberline {4.2}سنتز \lr {Vectoring}}{43}{subsection.4.2}% 
-\contentsline {section}{مراجع}{45}{section*.2}% 
+\contentsline {section}{\numberline {5}نتیجه گیری}{45}{section.5}% 
